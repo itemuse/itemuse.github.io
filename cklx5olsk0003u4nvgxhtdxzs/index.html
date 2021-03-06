@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          目录 - Freedom Youth
+          XService使用笔记 - Freedom Youth
         
     </title>
 
-    <link rel="canonical" href="http://freedomyouth.gitee.io/cklx4spu70001dknv6m2m1h9h/">
+    <link rel="canonical" href="http://freedomyouth.gitee.io/cklx5olsk0003u4nvgxhtdxzs/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -112,19 +112,23 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#Service" title="Service">Service</a>
+                            
+                              <a class="tag" href="/tags/#xlib" title="xlib">xlib</a>
+                            
                         </div>
-                        <h1>目录</h1>
+                        <h1>XService使用笔记</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by  on
-                            2021-03-05
+                            2021-01-06
                         </span>
 
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">69</span> and
-                                Reading Time <span class="post-count">1</span> Minutes
+                                Words <span class="post-count">1.1k</span> and
+                                Reading Time <span class="post-count">5</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -185,7 +189,7 @@
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -199,14 +203,7 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/photography/">Photography</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
@@ -214,6 +211,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
@@ -268,66 +272,77 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="一-个人项目"><a href="#一-个人项目" class="headerlink" title="一.个人项目"></a>一.个人项目</h3><p><strong><a href="https://github.com/itemuse/XLib" target="_blank" rel="noopener">工具Jar</a></strong><br><a href="https://jitpack.io/#itemuse/XLib" target="_blank" rel="noopener"><img src="https://jitpack.io/v/itemuse/XLib.svg" alt=""></a></p>
+                <h3 id="一-源码传送门："><a href="#一-源码传送门：" class="headerlink" title="一.源码传送门："></a>一.源码传送门：</h3><p><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/service/XService.java" target="_blank" rel="noopener">Service</a><br><a href="https://github.com/itemuse/XMusic/blob/master/app/src/main/java/com/tw/music/MusicService.java" target="_blank" rel="noopener">MusicService.java</a><br>此文是在此基础上做的讲解,用于加深印象</p>
+<h3 id="二-使用方法"><a href="#二-使用方法" class="headerlink" title="二.使用方法"></a>二.使用方法</h3><ul>
+<li><strong>启动服务</strong><br>提供三种传参启动方法<br><img src="Image1.png" alt="image"></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">XService.startService(TestService.class);</span><br><span class="line">XService.startService(new Intent(this,TestService.class));</span><br><span class="line">XService.startService(&quot;com.xy.app.TestService&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* Start the service.</span><br><span class="line">*</span><br><span class="line">* @param intent The intent.</span><br><span class="line">*&#x2F;</span><br><span class="line">public static void startService(Intent intent) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);</span><br><span class="line">        if (Build.VERSION.SDK_INT &gt;&#x3D; Build.VERSION_CODES.O) &#123;</span><br><span class="line">            XApp.getApp().startForegroundService(intent);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            XApp.getApp().startService(intent);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/app/XApplication.java" target="_blank" rel="noopener">app</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/array/XArray.java" target="_blank" rel="noopener">Array</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/bar/navigationbar/XNavigationBar.java" target="_blank" rel="noopener">NavigationBar</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/bar/systemui/XSystemUI.java" target="_blank" rel="noopener">SystemUi</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/file/XFile.java" target="_blank" rel="noopener">File</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/file/XFileIO.java" target="_blank" rel="noopener">FileIO</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/fragment/XFragment.java" target="_blank" rel="noopener">Fragment</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/image/XImage.java" target="_blank" rel="noopener">Image</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/log/XLog.java" target="_blank" rel="noopener">Log</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/map/XMap.java" target="_blank" rel="noopener">Map</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/network/XNetwork.java" target="_blank" rel="noopener">Network</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/permissions/XPermission.java" target="_blank" rel="noopener">Permission</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/resource/XResource.java" target="_blank" rel="noopener">Resource</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/screen/XScreen.java" target="_blank" rel="noopener">Screen</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/sdcard/XSDCard.java" target="_blank" rel="noopener">SDCard</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/service/XService.java" target="_blank" rel="noopener">Service</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/sharedpreferences/XSPUtils.java" target="_blank" rel="noopener">sharedpreferences</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/size/XSize.java" target="_blank" rel="noopener">Size</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/spannable/XSpanned.java" target="_blank" rel="noopener">Spanned</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/string/XString.java" target="_blank" rel="noopener">String</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/tab/XTab.java" target="_blank" rel="noopener">Tab</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/thread/XThread.java" target="_blank" rel="noopener">Thread</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/time/XTime.java" target="_blank" rel="noopener">Time</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/toast/XToast.java" target="_blank" rel="noopener">Toast</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/zip/XZip.java" target="_blank" rel="noopener">Zip</a></li>
+<li><strong>停止服务</strong></li>
 </ul>
-<p><strong>独立项目</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">XService.stopService(TestService.class);</span><br><span class="line">XService.stopService(new Intent(this,TestService.class));</span><br><span class="line">XService.unbindService(mConnection);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Stop the service.</span><br><span class="line"> *</span><br><span class="line"> * @param intent The intent.</span><br><span class="line"> * @return &#123;@code true&#125;: success&lt;br&gt;&#123;@code false&#125;: fail</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static boolean stopService(@NonNull Intent intent) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        return XApp.getApp().stopService(intent);</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://github.com/itemuse/XMusic" target="_blank" rel="noopener">XMusic</a></li>
-<li><a href="https://github.com/itemuse/XVideo" target="_blank" rel="noopener">XVideo</a></li>
-<li><a href="https://github.com/itemuse/MVP" target="_blank" rel="noopener">MVP框架</a></li>
-<li><a href="https://github.com/itemuse/ExpandableListView" target="_blank" rel="noopener">ExpandableListView</a></li>
+<li><em>*绑定服务</em><br><img src="Image2.png" alt="image"></li>
 </ul>
-<h3 id="二-官方手册"><a href="#二-官方手册" class="headerlink" title="二.官方手册"></a>二.官方手册</h3><ul>
-<li><a href="https://developer.android.google.cn/" target="_blank" rel="noopener">developers</a></li>
-</ul>
-<h3 id="三-API收集"><a href="#三-API收集" class="headerlink" title="三.API收集"></a>三.API收集</h3><p><strong>测滑返回SwipeBackLayout</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">XService.bindService(TestService.class,mConnection, Service.BIND_AUTO_CREATE);</span><br><span class="line">XService.bindService(&quot;com.softwinner.app.TestService&quot;,mConnection, Service.BIND_AUTO_CREATE);</span><br><span class="line">XService.bindService(new Intent(this,TestService.class),mConnection, Service.BIND_AUTO_CREATE);</span><br><span class="line"></span><br><span class="line">private ServiceConnection mConnection &#x3D; new ServiceConnection() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onServiceDisconnected(ComponentName name) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onServiceConnected(ComponentName name, IBinder service) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://qibilly.com/SmartSwipe-tutorial/" target="_blank" rel="noopener">SmartSwipe</a></li>
+<li><em>*绑定服务</em></li>
 </ul>
-<p><strong>沉浸式状态栏和导航栏</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">XService.unbindService(mConnection);</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://github.com/gyf-dev/ImmersionBar" target="_blank" rel="noopener">ImmersionBar</a></li>
+<li><strong>查询存活服务</strong></li>
 </ul>
-
+<p>目前测试的情况，5.0 6.0 7.0可以查询到所有系统存货的服务，8.0 9.0 10.0上只可以查询到本进程的服务。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static Set&lt;String&gt; getAllRunningServices() &#123;</span><br><span class="line">    ActivityManager am &#x3D; (ActivityManager) App.getApp().getSystemService(Context.ACTIVITY_SERVICE);</span><br><span class="line">    List&lt;RunningServiceInfo&gt; info &#x3D; am.getRunningServices(0x7FFFFFFF);</span><br><span class="line">    Set&lt;String&gt; names &#x3D; new HashSet&lt;&gt;();</span><br><span class="line">    if (info &#x3D;&#x3D; null || info.size() &#x3D;&#x3D; 0) return null;</span><br><span class="line">    for (RunningServiceInfo aInfo : info) &#123;</span><br><span class="line">        names.add(aInfo.service.getClassName());</span><br><span class="line">    &#125;</span><br><span class="line">    return names;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>查询服务是否存活</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static boolean isServiceRunning(@NonNull final String className) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        ActivityManager am &#x3D; (ActivityManager) App.getApp().getSystemService(Context.ACTIVITY_SERVICE);</span><br><span class="line">        List&lt;RunningServiceInfo&gt; info &#x3D; am.getRunningServices(0x7FFFFFFF);</span><br><span class="line">        if (info &#x3D;&#x3D; null || info.size() &#x3D;&#x3D; 0) return false;</span><br><span class="line">        for (RunningServiceInfo aInfo : info) &#123;</span><br><span class="line">            if (className.equals(aInfo.service.getClassName())) return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125; catch (Exception ignore) &#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>使用service注意</strong><br>使用了startservice，也用了bindservice的情况下启用一个服务。<br>未stopservice之前，unbindservice服务是不会被销毁。<br>未unbindservice之前，stopservice服务是不会被销毁的。</p>
+</li>
+<li><p><strong>前台服务和后台服务区别</strong></p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>前台服务</th>
+<th>后台服务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会在通知一栏显示 ONGOING 的 Notification，当服务被终止的时候，通知一栏的 Notification 也会消失，这样对于用户有一定的通知作用。常见的如音乐播放服务。</td>
+<td>默认的服务即为后台服务，即不会在通知一栏显示 ONGOING 的 Notification。当服务被终止的时候，用户是看不到效果的。某些不需要运行或终止提示的服务，如天气更新，日期同步，邮件同步等。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="三-8-0之后的服务"><a href="#三-8-0之后的服务" class="headerlink" title="三.8.0之后的服务"></a>三.8.0之后的服务</h3><ul>
+<li><p>Android 8.0 之前<br>创建前台服务的方式通常是先创建一个后台服务，然后将该服务推到前台。</p>
+</li>
+<li><p>Android 8.0 之后<br>系统不允许后台应用创建后台服务。 引入了一种全新的方法，即 Context.startForegroundService()，以在前台启动新服务。</p>
+</li>
+</ul>
+<p>在系统创建服务后，应用有五秒的时间来调用该服务的 startForeground() 方法以显示新服务的用户可见通知。</p>
+<p>如果应用在此时间限制内未调用 startForeground()，则系统将停止服务并声明此应用为 ANR。</p>
+<p>以我的音乐服务为例,在onStartCommand方法里增加一个Notification</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public class MusicService extends MService&lt;MusicPresenter&gt; implements MusicView &#123;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">    @Override</span><br><span class="line">    public int onStartCommand(Intent intent, int flags, int startId) &#123;</span><br><span class="line">        Notification.Builder builder &#x3D; new Notification.Builder(XApp.getApp());</span><br><span class="line">        Intent nfIntent &#x3D; new Intent(this, MusicActivity.class);</span><br><span class="line">        builder.setContentIntent(PendingIntent.</span><br><span class="line">                getActivity(this, 0, nfIntent, 0))</span><br><span class="line">                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(),R.drawable.ic_launcher))</span><br><span class="line">                .setContentTitle(&quot;微音正在后台运行&quot;)</span><br><span class="line">                .setSmallIcon(R.drawable.ic_launcher)</span><br><span class="line">                .setContentText(&quot;要显示的内容&quot;)</span><br><span class="line">                .setWhen(System.currentTimeMillis());</span><br><span class="line">        if (android.os.Build.VERSION.SDK_INT &gt;&#x3D; android.os.Build.VERSION_CODES.O) &#123;</span><br><span class="line">            NotificationChannel notificationChannel &#x3D; new NotificationChannel(&quot;1&quot;, &quot;Name&quot;,NotificationManager.IMPORTANCE_MIN);</span><br><span class="line">            notificationChannel.enableLights(false);&#x2F;&#x2F;如果使用中的设备支持通知灯，则说明此通知通道是否应显示灯</span><br><span class="line">            notificationChannel.setShowBadge(false);&#x2F;&#x2F;是否显示角标</span><br><span class="line">            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);</span><br><span class="line">            NotificationManager manager &#x3D; (NotificationManager) getSystemService(NOTIFICATION_SERVICE);</span><br><span class="line">            manager.createNotificationChannel(notificationChannel);</span><br><span class="line">            builder.setChannelId(&quot;1&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        Notification notification &#x3D; builder.build(); &#x2F;&#x2F; 获取构建好的Notification</span><br><span class="line">        notification.defaults &#x3D; Notification.DEFAULT_SOUND; &#x2F;&#x2F;设置为默认的声音</span><br><span class="line">        &#x2F;&#x2F; 参数一：唯一的通知标识；参数二：通知消息。</span><br><span class="line">         startForeground(110, notification);&#x2F;&#x2F; 开始前台服务</span><br><span class="line">        return super.onStartCommand(intent, flags, startId);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结<br>Android O 后台应用想启动服务就老老实实的加个notification给用户看，表示你自己在后台占着资源，杀不杀由用户决定，偷偷地在后台跑没有framework帮忙想都别想，一个anr+crash套餐了解一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- activity： Context.startForegroundService() </span><br><span class="line">- Service：startForeground(int id, Notification notification)（id must not be 0）</span><br></pre></td></tr></table></figure>
                 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/cklx4spua0003dknv9d1k4jti/" data-toggle="tooltip" data-placement="top" title="XService使用笔记">&larr; Previous Post</a>
+                        <a href="/cklx5olsm0006u4nvhpj4bdmp/" data-toggle="tooltip" data-placement="top" title="XSpanned使用笔记">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/cklx4spuc0006dknv8oe1cgkz/" data-toggle="tooltip" data-placement="top" title="二级选择框使用笔记">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
@@ -439,7 +454,7 @@
           <strong class="toc-title">Contents</strong>
           
             
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-个人项目"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.个人项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-官方手册"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.官方手册</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-API收集"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.API收集</span></a></li></ol>
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-源码传送门："><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.源码传送门：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-使用方法"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.使用方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-8-0之后的服务"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.8.0之后的服务</span></a></li></ol>
             
           
           </div>
@@ -461,6 +476,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Service" title="Service">Service</a>
+                        
+                          <a class="tag" href="/tags/#xlib" title="xlib">xlib</a>
+                        
                     </div>
                 </section>
                 
