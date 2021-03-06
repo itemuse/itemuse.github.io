@@ -20,7 +20,7 @@
         
     </title>
 
-    <link rel="canonical" href="http://freedomyouth.gitee.io/2017/07/21/解读闹钟代码/">
+    <link rel="canonical" href="http://freedomyouth.gitee.io/2018/07/21/解读闹钟代码/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -119,7 +119,7 @@
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by  on
-                            2017-07-21
+                            2018-07-21
                         </span>
 
                         
@@ -187,7 +187,7 @@
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +208,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
@@ -303,7 +303,7 @@
 <ul>
 <li><strong>AlarmOpreation.class</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">释放</span><br><span class="line">**&#x2F;</span><br><span class="line">public static void cancelAlert(Context context, int type) &#123;</span><br><span class="line">		AlarmManager mAlarmManager &#x3D; (AlarmManager)</span><br><span class="line">				context.getSystemService(Context.ALARM_SERVICE);</span><br><span class="line">		Intent intent &#x3D; new Intent(AlarmsSetting.ALARM_ALERT_ACTION);</span><br><span class="line">		intent.putExtra(&quot;type&quot;, type);</span><br><span class="line">		intent.setClass(context, AlarmReceiver.class);</span><br><span class="line">		PendingIntent pi &#x3D; PendingIntent.getBroadcast(context, type, intent,</span><br><span class="line">				PendingIntent.FLAG_CANCEL_CURRENT);</span><br><span class="line">		mAlarmManager.cancel(pi);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">释放</span><br><span class="line">**&#x2F;</span><br><span class="line">public static void cancelAlert(Context context, int type) &#123;</span><br><span class="line">		AlarmManager mAlarmManager &#x3D; (AlarmManager)</span><br><span class="line">				context.getSystemService(Context.ALARM_SERVICE);</span><br><span class="line">		Intent intent &#x3D; new Intent(AlarmsSetting.ALARM_ALERT_ACTION);</span><br><span class="line">		intent.putExtra(&quot;type&quot;, type);</span><br><span class="line">		intent.setClass(context, AlarmReceiver.class);</span><br><span class="line">		PendingIntent pi &#x3D; PendingIntent.getBroadcast(context, type, intent,</span><br><span class="line">				PendingIntent.FLAG_CANCEL_CURRENT);</span><br><span class="line">		mAlarmManager.cancel(pi);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>设置:主要是将存储好的时间设置信息（小时，分钟，星期），通过 cacluteNextAlarm方法设置成一个特殊的 Calendar值用于定时，然后将对应的 type和 Action组成一个通过广播 pi！通过 AlarmManager的 set方法定时， mAlarmManager.set(AlarmManager.RTC_WAKEUP,mCalendar.getTimeInMillis(),pi);，定时将 pi中的内容发送出去！<br>核心就是这样！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">设置</span><br><span class="line">**&#x2F;</span><br><span class="line">public static void enableAlert(Context context, int type, AlarmsSetting alarmsSetting) &#123;</span><br><span class="line">		if(type&#x3D;&#x3D;AlarmsSetting.ALARM_SETTING_TYPE_IN &amp;&amp; !alarmsSetting.isInEnble())&#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;else if(type&#x3D;&#x3D;AlarmsSetting.ALARM_SETTING_TYPE_OUT &amp;&amp; !alarmsSetting.isOutEnble())&#123;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		int rantime &#x3D; alarmsSetting.getDynamic();</span><br><span class="line">		AlarmManager mAlarmManager &#x3D; (AlarmManager)</span><br><span class="line">				context.getSystemService(Context.ALARM_SERVICE);</span><br><span class="line">		int hours &#x3D; 0,minute&#x3D;0,dayOfweek&#x3D;0;</span><br><span class="line">		if(type&#x3D;&#x3D;AlarmsSetting.ALARM_SETTING_TYPE_IN)&#123;</span><br><span class="line">			hours &#x3D; alarmsSetting.getInHour();</span><br><span class="line">			minute&#x3D;alarmsSetting.getInMinutes();</span><br><span class="line">			dayOfweek &#x3D; alarmsSetting.getInDays();</span><br><span class="line">		&#125;else if(type&#x3D;&#x3D;AlarmsSetting.ALARM_SETTING_TYPE_OUT)&#123;</span><br><span class="line">			hours &#x3D; alarmsSetting.getOutHour();</span><br><span class="line">			minute&#x3D;alarmsSetting.getOutMinutes();</span><br><span class="line">			dayOfweek&#x3D;alarmsSetting.getOutDays();</span><br><span class="line">		&#125;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>处理成循环周期</p>
@@ -324,6 +324,10 @@
                         <a href="/2020/12/14/常用弹出对话框整理/" data-toggle="tooltip" data-placement="top" title="常用弹出对话框整理">&larr; Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/2017/11/08/SQLite的介绍及使用/" data-toggle="tooltip" data-placement="top" title="SQLite的介绍及使用">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
