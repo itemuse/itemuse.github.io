@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          目录 - Freedom Youth
+          XSpanned使用笔记 - Freedom Youth
         
     </title>
 
-    <link rel="canonical" href="http://freedomyouth.gitee.io/cklx5olsh0001u4nvgmzh213w/">
+    <link rel="canonical" href="http://freedomyouth.gitee.io/2021/01/20/XSpanned使用笔记/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -112,19 +112,23 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#xlib" title="xlib">xlib</a>
+                            
+                              <a class="tag" href="/tags/#Spanned" title="Spanned">Spanned</a>
+                            
                         </div>
-                        <h1>目录</h1>
+                        <h1>XSpanned使用笔记</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by  on
-                            2021-03-05
+                            2021-01-20
                         </span>
 
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">69</span> and
-                                Reading Time <span class="post-count">1</span> Minutes
+                                Words <span class="post-count">727</span> and
+                                Reading Time <span class="post-count">3</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -192,20 +196,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/categories/">Categories</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/tags/">Tags</a>
                         </li>
                         
@@ -213,7 +203,21 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
@@ -268,61 +272,108 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="一-个人项目"><a href="#一-个人项目" class="headerlink" title="一.个人项目"></a>一.个人项目</h3><p><strong><a href="https://github.com/itemuse/XLib" target="_blank" rel="noopener">工具Jar</a></strong><br><a href="https://jitpack.io/#itemuse/XLib" target="_blank" rel="noopener"><img src="https://jitpack.io/v/itemuse/XLib.svg" alt=""></a></p>
+                <h3 id="一-源码传送门："><a href="#一-源码传送门：" class="headerlink" title="一.源码传送门："></a>一.源码传送门：</h3><ul>
+<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/spannable/XSpanned.java" target="_blank" rel="noopener">Spanned</a><br>此文是在此基础上做的讲解,用于加深印象</li>
+</ul>
+<h3 id="二-使用"><a href="#二-使用" class="headerlink" title="二.使用"></a>二.使用</h3><ul>
+<li><strong>初始化</strong><br>把textview控件传过去即可<br>append传入要显示的字符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">TextView mTextview &#x3D; findViewById(R.id.text);</span><br><span class="line">SpanUtils.with(mTextview)</span><br><span class="line">        .append(getString(R.string.text)) </span><br><span class="line">        .create();</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/app/XApplication.java" target="_blank" rel="noopener">app</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/array/XArray.java" target="_blank" rel="noopener">Array</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/bar/navigationbar/XNavigationBar.java" target="_blank" rel="noopener">NavigationBar</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/bar/systemui/XSystemUI.java" target="_blank" rel="noopener">SystemUi</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/file/XFile.java" target="_blank" rel="noopener">File</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/file/XFileIO.java" target="_blank" rel="noopener">FileIO</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/fragment/XFragment.java" target="_blank" rel="noopener">Fragment</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/image/XImage.java" target="_blank" rel="noopener">Image</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/log/XLog.java" target="_blank" rel="noopener">Log</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/map/XMap.java" target="_blank" rel="noopener">Map</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/network/XNetwork.java" target="_blank" rel="noopener">Network</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/permissions/XPermission.java" target="_blank" rel="noopener">Permission</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/resource/XResource.java" target="_blank" rel="noopener">Resource</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/screen/XScreen.java" target="_blank" rel="noopener">Screen</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/sdcard/XSDCard.java" target="_blank" rel="noopener">SDCard</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/service/XService.java" target="_blank" rel="noopener">Service</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/sharedpreferences/XSPUtils.java" target="_blank" rel="noopener">sharedpreferences</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/size/XSize.java" target="_blank" rel="noopener">Size</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/spannable/XSpanned.java" target="_blank" rel="noopener">Spanned</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/string/XString.java" target="_blank" rel="noopener">String</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/tab/XTab.java" target="_blank" rel="noopener">Tab</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/thread/XThread.java" target="_blank" rel="noopener">Thread</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/time/XTime.java" target="_blank" rel="noopener">Time</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/toast/XToast.java" target="_blank" rel="noopener">Toast</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/zip/XZip.java" target="_blank" rel="noopener">Zip</a></li>
+<li><strong>设置字体大小</strong></li>
 </ul>
-<p><strong>独立项目</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.append(&quot;X&quot;)</span><br><span class="line">.setFontSize(50)</span><br><span class="line">.append(&quot;Y&quot;)</span><br><span class="line">.setFontSize(150)</span><br><span class="line">.append(&quot;Z&quot;)</span><br><span class="line">.setFontSize(20)</span><br></pre></td></tr></table></figure>
+<p><img src="Image1.png" alt="iamge"></p>
 <ul>
-<li><a href="https://github.com/itemuse/XMusic" target="_blank" rel="noopener">XMusic</a></li>
-<li><a href="https://github.com/itemuse/XVideo" target="_blank" rel="noopener">XVideo</a></li>
-<li><a href="https://github.com/itemuse/MVP" target="_blank" rel="noopener">MVP框架</a></li>
-<li><a href="https://github.com/itemuse/ExpandableListView" target="_blank" rel="noopener">ExpandableListView</a></li>
+<li><strong>前景色、背景色</strong></li>
 </ul>
-<h3 id="二-官方手册"><a href="#二-官方手册" class="headerlink" title="二.官方手册"></a>二.官方手册</h3><ul>
-<li><a href="https://developer.android.google.cn/" target="_blank" rel="noopener">developers</a></li>
-</ul>
-<h3 id="三-API收集"><a href="#三-API收集" class="headerlink" title="三.API收集"></a>三.API收集</h3><p><strong>测滑返回SwipeBackLayout</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.setForegroundColor(getColor(R.color.colorAccent1))</span><br></pre></td></tr></table></figure>
+<p><img src="Image2.png" alt="iamge"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.setBackgroundColor(getColor(R.color.colorAccent1))</span><br></pre></td></tr></table></figure>
+<p><img src="Image3.png" alt="iamge"></p>
 <ul>
-<li><a href="https://qibilly.com/SmartSwipe-tutorial/" target="_blank" rel="noopener">SmartSwipe</a></li>
+<li><strong>设置引用线颜色</strong></li>
 </ul>
-<p><strong>沉浸式状态栏和导航栏</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.setQuoteColor(getColor(R.color.colorAccent1))</span><br></pre></td></tr></table></figure>
+<p><img src="Image4.png" alt="iamge"></p>
 <ul>
-<li><a href="https://github.com/gyf-dev/ImmersionBar" target="_blank" rel="noopener">ImmersionBar</a></li>
+<li><strong>设置缩进</strong></li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.setLeadingMargin(50, &#x2F;*第一行缩进值*&#x2F; 0 &#x2F;*其余行缩进值*&#x2F;)</span><br></pre></td></tr></table></figure>
+<p>设置前<br><img src="Image5.png" alt="iamge"><br>设置后<br><img src="Image6.png" alt="iamge"></p>
+<ul>
+<li><strong>设置行高</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">    public static final int ALIGN_BOTTOM   &#x3D; 0;</span><br><span class="line">    public static final int ALIGN_BASELINE &#x3D; 1;</span><br><span class="line">    public static final int ALIGN_CENTER   &#x3D; 2;</span><br><span class="line">    public static final int ALIGN_TOP      &#x3D; 3;</span><br><span class="line">*&#x2F;</span><br><span class="line">.setLineHeight(100&#x2F;*行高*&#x2F;,SpanUtils.ALIGN_CENTER&#x2F;*重心*&#x2F;)</span><br></pre></td></tr></table></figure>
+<p>设置前<br><img src="Image7.png" alt="iamge"><br>设置后<br><img src="Image8.png" alt="iamge"></p>
+<ul>
+<li><strong>字体比例</strong><br>修改前：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.append(getString(R.string.text))</span><br></pre></td></tr></table></figure>
+<p><img src="Image9.png" alt="iamge"><br>修改后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setFontProportion((float) 1.9) &#x2F;&#x2F;整体比例</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setFontXProportion((float) 1.5)&#x2F;&#x2F;宽度比例</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setFontXProportion((float) 0.3)&#x2F;&#x2F;宽度比例</span><br></pre></td></tr></table></figure>
+<p><img src="Image10.png" alt="iamge"></p>
+<ul>
+<li><strong>删除线、下划线</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.setStrikethrough() &#x2F;&#x2F;删除线</span><br></pre></td></tr></table></figure>
+<p><img src="Image11.png" alt="iamge"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.setUnderline() &#x2F;&#x2F;下划线</span><br></pre></td></tr></table></figure>
+<p><img src="Image12.png" alt="iamge"></p>
+<ul>
+<li><strong>设置粗体、斜体</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setBold()           &#x2F;&#x2F;设置粗体</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setItalic()         &#x2F;&#x2F;设置斜体</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setBoldItalic()     &#x2F;&#x2F;设置粗斜体</span><br></pre></td></tr></table></figure>
+<p><img src="Image13.png" alt="iamge"></p>
+<ul>
+<li><strong>设置字体</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setTypeface(Typeface.DEFAULT_BOLD)       &#x2F;&#x2F;设置字体</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setTypeface(Typeface.SANS_SERIF)       &#x2F;&#x2F;设置字体</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setTypeface(Typeface.SERIF)       &#x2F;&#x2F;设置字体</span><br></pre></td></tr></table></figure>
+<p><img src="Image14.png" alt="iamge"></p>
+<ul>
+<li><strong>设置单独点击事件</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.append(&quot;点击事件1&quot;)</span><br><span class="line">.setClickSpan(new ClickableSpan() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        XLog.i(&quot;&#x2F;&#x2F;设置点击事件1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)      &#x2F;&#x2F;设置点击事件</span><br><span class="line">.append(&quot;点击事件2&quot;)</span><br><span class="line">.setClickSpan(getColor(R.color.colorAccent4),true, new View.OnClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        XLog.i(&quot;&#x2F;&#x2F;设置点击事件2&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)      &#x2F;&#x2F;设置点击事件</span><br></pre></td></tr></table></figure>
+<p>打印</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2021-01-12 00:29:12.802 13577-13577&#x2F;com.softwinner.app I&#x2F;MainActivity.java: [ (MainActivity.java:75)#onClick ] &#x2F;&#x2F;设置点击事件1</span><br><span class="line">2021-01-12 00:29:13.190 13577-13577&#x2F;com.softwinner.app I&#x2F;MainActivity.java: [ (MainActivity.java:82)#onClick ] &#x2F;&#x2F;设置点击事件2</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>超链接</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setUrl(&quot;http:&#x2F;&#x2F;www.baidu.com&quot;)            &#x2F;&#x2F;设置超链接</span><br></pre></td></tr></table></figure>
+<p><img src="Image15.png" alt="iamge"><br>点击会跳转浏览器<br><img src="Image16.png" alt="iamge"></p>
+<ul>
+<li><p><strong>设置模糊</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setBlur((float) 1, BlurMaskFilter.Blur.SOLID)           &#x2F;&#x2F;设置模糊</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setBlur((float) 1, BlurMaskFilter.Blur.OUTER)           &#x2F;&#x2F;设置模糊</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setBlur((float) 1, BlurMaskFilter.Blur.INNER)           &#x2F;&#x2F;设置模糊</span><br><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setBlur((float) 1, BlurMaskFilter.Blur.NORMAL)           &#x2F;&#x2F;设置模糊</span><br></pre></td></tr></table></figure>
+<p><img src="Image17.png" alt="iamge"></p>
+</li>
+<li><p><strong>设置阴影</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.append(getString(R.string.text))</span><br><span class="line">.setShadow(15,5,5,getColor(R.color.colorAccent1))         &#x2F;&#x2F;设置阴影</span><br></pre></td></tr></table></figure>
+<p><img src="Image18.png" alt="iamge"></p>
+<ul>
+<li><strong>追加图片</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.append(&quot;追加图片&quot;)</span><br><span class="line">.appendImage(R.drawable.ic_launcher_background,SpanUtils.ALIGN_BOTTOM)       &#x2F;&#x2F;追加图片</span><br></pre></td></tr></table></figure>
+<p><img src="Image19.png" alt="iamge"></p>
+<ul>
+<li><strong>追加空格</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.append(&quot;追加图片&quot;)</span><br><span class="line">.appendSpace(20)       &#x2F;&#x2F;追加空白</span><br><span class="line">.append(&quot;追加图片&quot;)</span><br></pre></td></tr></table></figure>
+<p><img src="Image20.png" alt="iamge"></p>
 
                 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/2021/01/26/MVP框架示例讲解/" data-toggle="tooltip" data-placement="top" title="MVP框架示例讲解">&larr; Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/cklx5olso0008u4nv2b86by1b/" data-toggle="tooltip" data-placement="top" title="二级选择框使用笔记">Next Post &rarr;</a>
+                        <a href="/2021/01/06/XService使用笔记/" data-toggle="tooltip" data-placement="top" title="XService使用笔记">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -435,7 +486,7 @@
           <strong class="toc-title">Contents</strong>
           
             
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-个人项目"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.个人项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-官方手册"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.官方手册</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-API收集"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.API收集</span></a></li></ol>
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-源码传送门："><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.源码传送门：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-使用"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.使用</span></a></li></ol>
             
           
           </div>
@@ -457,6 +508,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#xlib" title="xlib">xlib</a>
+                        
+                          <a class="tag" href="/tags/#Spanned" title="Spanned">Spanned</a>
+                        
                     </div>
                 </section>
                 
