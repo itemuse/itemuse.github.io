@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          目录 - Freedom Youth
+          二级选择框使用笔记 - Freedom Youth
         
     </title>
 
-    <link rel="canonical" href="http://freedomyouth.gitee.io/cklwj6n8c0001dwnvell03o7f/">
+    <link rel="canonical" href="http://freedomyouth.gitee.io/cklx2slv60003j0nvcfygacli/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -112,19 +112,21 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#ExpandableListView" title="ExpandableListView">ExpandableListView</a>
+                            
                         </div>
-                        <h1>目录</h1>
+                        <h1>二级选择框使用笔记</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by  on
-                            2021-03-05
+                            2021-02-27
                         </span>
 
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">62</span> and
-                                Reading Time <span class="post-count">1</span> Minutes
+                                Words <span class="post-count">632</span> and
+                                Reading Time <span class="post-count">3</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -185,14 +187,21 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -207,13 +216,6 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
@@ -268,59 +270,60 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="个人项目"><a href="#个人项目" class="headerlink" title="个人项目"></a>个人项目</h3><h4 id="XLib"><a href="#XLib" class="headerlink" title="XLib"></a><a href="https://github.com/itemuse/XLib" target="_blank" rel="noopener">XLib</a></h4><p><a href="https://jitpack.io/#itemuse/XLib" target="_blank" rel="noopener"><img src="https://jitpack.io/v/itemuse/XLib.svg" alt=""></a></p>
+                <h3 id="一-效果图："><a href="#一-效果图：" class="headerlink" title="一.效果图："></a>一.效果图：</h3><p><img src="device.gif" alt="image"></p>
+<h3 id="二-源码传送门："><a href="#二-源码传送门：" class="headerlink" title="二.源码传送门："></a>二.源码传送门：</h3><p><a href="https://github.com/itemuse/ExpandableListView" target="_blank" rel="noopener">ExpandableListView</a><br>此文是在基础上做的讲解,用于加深印象</p>
+<h3 id="三-主要方法及监听器"><a href="#三-主要方法及监听器" class="headerlink" title="三.主要方法及监听器"></a>三.主要方法及监听器</h3><ul>
+<li><p><strong>collapseGroup( int position)</strong><br>收起 position 位置的分组</p>
+</li>
+<li><p><strong>expandGroup(int position)</strong><br>展开position位置的分组</p>
+</li>
+<li><p><strong>isGroupExpanded(int position)</strong><br>判断position位置的分组是否展开</p>
+</li>
+<li><p><strong>setAdapter(ExpandableListAdapter adapter)</strong><br>给ExpandableListView 设置适配器</p>
+</li>
+<li><p><strong>setOnChildClickListener(OnChildClickListener listener)</strong><br>设置分组中子条目的点击监听器</p>
+</li>
+<li><p><strong>setOnGroupClickListener(OnGroupClickListener listener)</strong><br>设置分组的点击监听器</p>
+</li>
+<li><p><strong>setOnGroupCollapseListener(OnGroupCollapseListener listener)</strong><br>设置分组收起的监听器</p>
+</li>
+<li><p><strong>setOnGroupExpandListener(OnGroupExpandListener listener)</strong><br>设置分组展开的监听器</p>
+</li>
+</ul>
+<h3 id="四-几个XML属性"><a href="#四-几个XML属性" class="headerlink" title="四.几个XML属性"></a>四.几个XML属性</h3><ul>
+<li><p><strong>android:groupIndicator</strong><br>组指示器，取值可以是任意的Drawable对象。显示在 该分组的最左侧。如果不设置的话，默认是一个向下的箭头，点击展开内容之后会变成向上的箭头</p>
+</li>
+<li><p><strong>android:childIndicator</strong><br>子条目指示器，取值可以是任意的Drawable 对象。显示在分组中的每一个 子条目 的最左侧。没有默认图标。</p>
+</li>
+</ul>
+<h3 id="五-用法"><a href="#五-用法" class="headerlink" title="五.用法"></a>五.用法</h3><ul>
+<li><strong>首先要准备好要填充的一级列表的的数据和对应的二级列表数据</strong><br>demo一级列表一共是三个选项<br>所以会有三个子选项的选项集合</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ParentList &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">for (CharSequence ss : getResources().getTextArray(R.array.parent_item))&#123;</span><br><span class="line">    ParentList.add((String)ss);</span><br><span class="line">&#125;</span><br><span class="line">ArrayList&lt;String&gt; childLists1 &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">for (CharSequence ss : getResources().getTextArray(R.array.child_1))&#123;</span><br><span class="line">    childLists1.add((String)ss);</span><br><span class="line">&#125;</span><br><span class="line">ArrayList&lt;String&gt; childLists2 &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">for (CharSequence ss : getResources().getTextArray(R.array.child_2))&#123;</span><br><span class="line">    childLists2.add((String)ss);</span><br><span class="line">&#125;</span><br><span class="line">ArrayList&lt;String&gt; childLists3 &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">for (CharSequence ss : getResources().getTextArray(R.array.child_3))&#123;</span><br><span class="line">    childLists3.add((String)ss);</span><br><span class="line">&#125;</span><br><span class="line">ChildLists &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">ChildLists.add(childLists1);</span><br><span class="line">ChildLists.add(childLists2);</span><br><span class="line">ChildLists.add(childLists3);</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/app/XApplication.java" target="_blank" rel="noopener">app</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/array/XArray.java" target="_blank" rel="noopener">Array</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/bar/navigationbar/XNavigationBar.java" target="_blank" rel="noopener">NavigationBar</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/bar/systemui/XSystemUI.java" target="_blank" rel="noopener">SystemUi</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/file/XFile.java" target="_blank" rel="noopener">File</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/file/XFileIO.java" target="_blank" rel="noopener">FileIO</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/fragment/XFragment.java" target="_blank" rel="noopener">Fragment</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/image/XImage.java" target="_blank" rel="noopener">Image</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/log/XLog.java" target="_blank" rel="noopener">Log</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/map/XMap.java" target="_blank" rel="noopener">Map</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/network/XNetwork.java" target="_blank" rel="noopener">Network</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/permissions/XPermission.java" target="_blank" rel="noopener">Permission</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/resource/XResource.java" target="_blank" rel="noopener">Resource</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/screen/XScreen.java" target="_blank" rel="noopener">Screen</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/sdcard/XSDCard.java" target="_blank" rel="noopener">SDCard</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/service/XService.java" target="_blank" rel="noopener">Service</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/sharedpreferences/XSPUtils.java" target="_blank" rel="noopener">sharedpreferences</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/size/XSize.java" target="_blank" rel="noopener">Size</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/spannable/XSpanned.java" target="_blank" rel="noopener">Spanned</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/string/XString.java" target="_blank" rel="noopener">String</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/tab/XTab.java" target="_blank" rel="noopener">Tab</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/thread/XThread.java" target="_blank" rel="noopener">Thread</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/time/XTime.java" target="_blank" rel="noopener">Time</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/toast/XToast.java" target="_blank" rel="noopener">Toast</a></li>
-<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/zip/XZip.java" target="_blank" rel="noopener">Zip</a></li>
+<li><strong>把准备好的一级二级数据传入adapter</strong></li>
 </ul>
-<h4 id="XApp"><a href="#XApp" class="headerlink" title="XApp"></a>XApp</h4><ul>
-<li><a href="https://github.com/itemuse/XMusic" target="_blank" rel="noopener">XMusic</a></li>
-<li><a href="https://github.com/itemuse/XVideo" target="_blank" rel="noopener">XVideo</a></li>
-<li><a href="https://github.com/itemuse/MVP" target="_blank" rel="noopener">MVP框架</a></li>
-<li><a href="https://github.com/itemuse/XRadio" target="_blank" rel="noopener">XRadio</a></li>
-<li><a href="https://github.com/itemuse/XEQ" target="_blank" rel="noopener">XEQ</a></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">mExpandableListView &#x3D; dialogView.findViewById(R.id.expandablelistview);</span><br><span class="line">final MultistageAdapter moAdapter &#x3D; new MultistageAdapter(this,ParentList, ChildLists, mParentmValue, mChildValue);</span><br><span class="line">mExpandableListView.setAdapter(moAdapter);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>监听点击事件</strong></li>
 </ul>
-<h3 id="官方手册"><a href="#官方手册" class="headerlink" title="官方手册"></a>官方手册</h3><ul>
-<li><a href="https://developer.android.google.cn/" target="_blank" rel="noopener">developers</a></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;一级选项点击回调</span><br><span class="line">mExpandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) &#123;</span><br><span class="line">        mParentmValue2 &#x3D;  groupPosition;</span><br><span class="line">        mChildValue2 &#x3D; 0;</span><br><span class="line">        moAdapter.notifyDataSetChanged(mParentmValue2,mChildValue2); &#x2F;&#x2F;更新选中状态</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;二级选项点击回调</span><br><span class="line">mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean onChildClick(ExpandableListView parent, View v, int reverseTypePosition, int reverseCisPosition, long id) &#123;</span><br><span class="line">        mParentmValue2 &#x3D;  reverseTypePosition;</span><br><span class="line">        mChildValue2 &#x3D;  reverseCisPosition;</span><br><span class="line">        moAdapter.notifyDataSetChanged(mParentmValue2,mChildValue2);&#x2F;&#x2F;更新选中状态</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>确认框中处理</strong></li>
 </ul>
-<h3 id="API收集"><a href="#API收集" class="headerlink" title="API收集"></a>API收集</h3><h4 id="测滑返回SwipeBackLayout"><a href="#测滑返回SwipeBackLayout" class="headerlink" title="测滑返回SwipeBackLayout"></a>测滑返回SwipeBackLayout</h4><ul>
-<li><a href="https://qibilly.com/SmartSwipe-tutorial/" target="_blank" rel="noopener">SmartSwipe</a></li>
-</ul>
-<h4 id="沉浸式状态栏和导航栏"><a href="#沉浸式状态栏和导航栏" class="headerlink" title="沉浸式状态栏和导航栏"></a>沉浸式状态栏和导航栏</h4><ul>
-<li><a href="https://github.com/gyf-dev/ImmersionBar" target="_blank" rel="noopener">ImmersionBar</a></li>
-</ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">private void showConfirmDialog()&#123;</span><br><span class="line">    final AlertDialog.Builder normalDialog &#x3D; new AlertDialog.Builder(this);</span><br><span class="line">    final String value &#x3D; ParentList.get(mParentmValue2)+&quot;&#x2F;&quot;+ChildLists.get(mParentmValue2).get(mChildValue);</span><br><span class="line">    normalDialog.setTitle(value);</span><br><span class="line">    normalDialog.setPositiveButton(&quot;OK&quot;,</span><br><span class="line">            new DialogInterface.OnClickListener() &#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void onClick(DialogInterface dialog, int which) &#123;</span><br><span class="line">                    mParentmValue &#x3D;  mParentmValue2;</span><br><span class="line">                    mChildValue &#x3D;  mChildValue2;</span><br><span class="line">                    Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">    ...</span><br><span class="line">    normalDialog.show();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/cklx2slv30001j0nv4a4palk0/" data-toggle="tooltip" data-placement="top" title="目录">&larr; Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/cklwj6n8t0009dwnv21k885yo/" data-toggle="tooltip" data-placement="top" title="二级选择框使用笔记">Next Post &rarr;</a>
+                        <a href="/cklx2slvk000ej0nvajk836xr/" data-toggle="tooltip" data-placement="top" title="MVP框架示例讲解">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -433,7 +436,7 @@
           <strong class="toc-title">Contents</strong>
           
             
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#个人项目"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">个人项目</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#XLib"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">XLib</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#XApp"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">XApp</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#官方手册"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">官方手册</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#API收集"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">API收集</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#测滑返回SwipeBackLayout"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">测滑返回SwipeBackLayout</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#沉浸式状态栏和导航栏"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">沉浸式状态栏和导航栏</span></a></li></ol></li></ol>
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-效果图："><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.效果图：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-源码传送门："><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.源码传送门：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-主要方法及监听器"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.主要方法及监听器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-几个XML属性"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.几个XML属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#五-用法"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五.用法</span></a></li></ol>
             
           
           </div>
@@ -455,6 +458,8 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#ExpandableListView" title="ExpandableListView">ExpandableListView</a>
+                        
                     </div>
                 </section>
                 
