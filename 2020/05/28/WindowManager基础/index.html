@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="my code warehouse">
+    <meta name="keyword"  content="hero world">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          WindowManager基础 - Freedom Youth
+        
+    </title>
+
+    <link rel="canonical" href="http://freedomyouth.gitee.io/2020/05/28/WindowManager基础/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS --> 
+    
+        
+<link rel="stylesheet" href="/css/dusign-light.css">
+
+        
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+
+        
+<link rel="stylesheet" href="/css/font-awesome.css">
+
+        
+<link rel="stylesheet" href="/css/toc.css">
+
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- photography -->
+    
+<link rel="stylesheet" href="/css/photography.css">
+
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../../img/default.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#WindowManager" title="WindowManager">WindowManager</a>
+                            
+                        </div>
+                        <h1>WindowManager基础</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by  on
+                            2020-05-28
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">1.8k</span> and
+                                Reading Time <span class="post-count">8</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="一-WindowManager介绍"><a href="#一-WindowManager介绍" class="headerlink" title="一.WindowManager介绍"></a>一.WindowManager介绍</h3><p>Android为我们提供的用于与窗口管理器进行交互的一个API！我们都知道App的界面都是 由一个个的Acitivty组成，而Activity又由View组成，当我们想显示一个界面的时候， 第一时间想起的是:Activity，对吧？又或者是Dialog和Toast。</p>
+<p>但是有些情况下，前面这三者可能满足不了我们的需求，比如我们仅仅是一个简单的显示 用Activity显得有点多余了，而Dialog又需要Context对象，Toast又不可以点击… 对于以上的情况我们可以利用WindowManager这个东东添加View到屏幕上， 或者从屏幕上移除View！他就是管理Android窗口机制的一个接口，显示View的最底层！</p>
+<h3 id="二-如何获得WindowManager实例"><a href="#二-如何获得WindowManager实例" class="headerlink" title="二.如何获得WindowManager实例"></a>二.如何获得WindowManager实例</h3><ol>
+<li>获得WindowManager对象:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WindowManager wManager &#x3D; getApplicationContext().getSystemService(Context. WINDOW_ SERVICE);</span><br></pre></td></tr></table></figure></li>
+<li>获得WindowManager.LayoutParams对象，为后续操作做准备<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WindowManager.LayoutParams wmParams&#x3D;new WindowManager.LayoutParams();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="三-WindowManager使用实例："><a href="#三-WindowManager使用实例：" class="headerlink" title="三.WindowManager使用实例："></a>三.WindowManager使用实例：</h3><ol>
+<li><p>实例1：获取屏幕宽高<br>在Android 4.2前我们可以用下述方法获得屏幕宽高：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public static int[] getScreenHW(Context context) &#123;</span><br><span class="line">    WindowManager manager &#x3D; (WindowManager)context</span><br><span class="line">    .getSystemService(Context.WINDOW_SERVICE);</span><br><span class="line">    Display display &#x3D; manager.getDefaultDisplay();</span><br><span class="line">    int width &#x3D; display.getWidth();</span><br><span class="line">    int height &#x3D; display.getHeight();</span><br><span class="line">    int[] HW &#x3D; new int[] &#123; width, height &#125;;</span><br><span class="line">    return HW;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而上述的方法在Android 4.2以后就过时了，我们可以用另一种方法获得屏幕宽高：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static int[] getScreenHW2(Context context) &#123;</span><br><span class="line">    WindowManager manager &#x3D; (WindowManager) context.</span><br><span class="line">    getSystemService(Context.WINDOW_SERVICE);</span><br><span class="line">    DisplayMetrics dm &#x3D; new DisplayMetrics();</span><br><span class="line">    manager.getDefaultDisplay().getMetrics(dm);</span><br><span class="line">    int width &#x3D; dm.widthPixels;</span><br><span class="line">    int height &#x3D; dm.heightPixels;</span><br><span class="line">    int[] HW &#x3D; new int[] &#123; width, height &#125;;</span><br><span class="line">    return HW;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后我们可以再另外写两个获取宽以及高的方法，这里以第二种获得屏幕宽高为例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public static int getScreenW(Context context) &#123;</span><br><span class="line">    return getScreenHW2(context)[0];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static int getScreenH(Context context) &#123;</span><br><span class="line">    return getScreenHW2(context)[1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，假如你不另外写一个工具类的话，你可以直接直接获取，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        WindowManager wManager &#x3D; (WindowManager) getSystemService(Context.WINDOW_SERVICE);</span><br><span class="line">        DisplayMetrics dm &#x3D; new DisplayMetrics();</span><br><span class="line">        wManager.getDefaultDisplay().getMetrics(dm);</span><br><span class="line">        Toast.makeText(MainActivity.this, &quot;当前手机的屏幕宽高：&quot; + dm.widthPixels + &quot;*&quot; +</span><br><span class="line">                dm.heightPixels, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br><img src="img1.jpg" alt=""></p>
+</li>
+<li><p>实例2：设置窗口全屏显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,</span><br><span class="line">                WindowManager.LayoutParams.FLAG_FULLSCREEN);</span><br><span class="line">        getSupportActionBar().hide();</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br><img src="img2.jpg" alt=""></p>
+</li>
+<li><p>实例3：保持屏幕常亮</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public void setKeepScreenOn(Activity activity,boolean keepScreenOn)  </span><br><span class="line">&#123;  </span><br><span class="line">    if(keepScreenOn)  </span><br><span class="line">    &#123;  </span><br><span class="line">        activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);  </span><br><span class="line">    &#125;else&#123;  </span><br><span class="line">        activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实例4：简单悬浮框的实现<br>实现代码：<br>首先我们需要一个后台的Service在后台等待我们的操作，比如完成悬浮框的绘制移除等， 于是乎我们定义一个Service：MyService.java： 我们需要一个创建悬浮框View的一个方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">private void createWindowView() &#123;</span><br><span class="line">    btnView &#x3D; new Button(getApplicationContext());</span><br><span class="line">    btnView.setBackgroundResource(R.mipmap.ic_launcher);</span><br><span class="line">    windowManager &#x3D; (WindowManager) getApplicationContext()</span><br><span class="line">            .getSystemService(Context.WINDOW_SERVICE);</span><br><span class="line">    params &#x3D; new WindowManager.LayoutParams();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 设置Window Type</span><br><span class="line">    params.type &#x3D; WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;</span><br><span class="line">    &#x2F;&#x2F; 设置悬浮框不可触摸</span><br><span class="line">    params.flags &#x3D; WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL</span><br><span class="line">            | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;</span><br><span class="line">    &#x2F;&#x2F; 悬浮窗不可触摸，不接受任何事件,同时不影响后面的事件响应</span><br><span class="line">    params.format &#x3D; PixelFormat.RGBA_8888;</span><br><span class="line">    &#x2F;&#x2F; 设置悬浮框的宽高</span><br><span class="line">    params.width &#x3D; 200;</span><br><span class="line">    params.height &#x3D; 200;</span><br><span class="line">    params.gravity &#x3D; Gravity.LEFT;</span><br><span class="line">    params.x &#x3D; 200;</span><br><span class="line">    params.y &#x3D; 000;</span><br><span class="line">    &#x2F;&#x2F; 设置悬浮框的Touch监听</span><br><span class="line">    btnView.setOnTouchListener(new View.OnTouchListener() &#123;</span><br><span class="line">        &#x2F;&#x2F;保存悬浮框最后位置的变量</span><br><span class="line">        int lastX, lastY;</span><br><span class="line">        int paramX, paramY;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public boolean onTouch(View v, MotionEvent event) &#123;</span><br><span class="line">            switch (event.getAction()) &#123;</span><br><span class="line">                case MotionEvent.ACTION_DOWN:</span><br><span class="line">                    lastX &#x3D; (int) event.getRawX();</span><br><span class="line">                    lastY &#x3D; (int) event.getRawY();</span><br><span class="line">                    paramX &#x3D; params.x;</span><br><span class="line">                    paramY &#x3D; params.y;</span><br><span class="line">                    break;</span><br><span class="line">                case MotionEvent.ACTION_MOVE:</span><br><span class="line">                    int dx &#x3D; (int) event.getRawX() - lastX;</span><br><span class="line">                    int dy &#x3D; (int) event.getRawY() - lastY;</span><br><span class="line">                    params.x &#x3D; paramX + dx;</span><br><span class="line">                    params.y &#x3D; paramY + dy;</span><br><span class="line">                    &#x2F;&#x2F; 更新悬浮窗位置</span><br><span class="line">                    windowManager.updateViewLayout(btnView, params);</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    windowManager.addView(btnView, params);</span><br><span class="line">    isAdded &#x3D; true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后我们只需在OnCreate( )方法中调用上述的createWindowView( )方法即可启动加载悬浮框， 但是我们发现了一点：这玩意貌似关不掉啊，卧槽，好吧，接下来我们就要分析下需求了!</p>
+</li>
+</ol>
+<p>当处于手机的普通界面，即桌面的时候，这玩意才显示，而当我们启动其他App时，这个悬浮框应该 消失不见,当我们推出app又回到桌面,这个悬浮框又要重新出现!</p>
+<p>那么我们首先需要判断App是否位于桌面，于是乎我们再加上下述代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**  </span><br><span class="line"> * 判断当前界面是否是桌面  </span><br><span class="line"> *&#x2F;    </span><br><span class="line">public boolean isHome()&#123;    </span><br><span class="line">    if(mActivityManager &#x3D;&#x3D; null) &#123;  </span><br><span class="line">        mActivityManager &#x3D; (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);    </span><br><span class="line">    &#125;  </span><br><span class="line">    List&lt;RunningTaskInfo&gt; rti &#x3D; mActivityManager.getRunningTasks(1);    </span><br><span class="line">    return homeList.contains(rti.get(0).topActivity.getPackageName());    </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">&#x2F;**  </span><br><span class="line"> * 获得属于桌面的应用的应用包名称  </span><br><span class="line"> * @return 返回包含所有包名的字符串列表  </span><br><span class="line"> *&#x2F;  </span><br><span class="line">private List&lt;String&gt; getHomes() &#123;  </span><br><span class="line">    List&lt;String&gt; names &#x3D; new ArrayList&lt;String&gt;();    </span><br><span class="line">    PackageManager packageManager &#x3D; this.getPackageManager();    </span><br><span class="line">    &#x2F;&#x2F; 属性    </span><br><span class="line">    Intent intent &#x3D; new Intent(Intent.ACTION_MAIN);    </span><br><span class="line">    intent.addCategory(Intent.CATEGORY_HOME);    </span><br><span class="line">    List&lt;ResolveInfo&gt; resolveInfo &#x3D; packageManager.queryIntentActivities(intent,    </span><br><span class="line">            PackageManager.MATCH_DEFAULT_ONLY);    </span><br><span class="line">    for(ResolveInfo ri : resolveInfo) &#123;    </span><br><span class="line">        names.add(ri.activityInfo.packageName);    </span><br><span class="line">    &#125;  </span><br><span class="line">    return names;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好了,接下来我们需要每隔一段时间来进行一系列的判断，比如：是否在桌面，是否已加载悬浮框， 否则加载；否则，如果加载了,就将这个悬浮框移除!这里我们使用handler~,因为不能在子线程直接 更新UI，所以，你懂的，所以我们自己写一个handler来完成上述的操作:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;定义一个更新界面的Handler  </span><br><span class="line">private Handler mHandler &#x3D; new Handler() &#123;  </span><br><span class="line">    @Override  </span><br><span class="line">    public void handleMessage(Message msg) &#123;  </span><br><span class="line">        switch(msg.what) &#123;  </span><br><span class="line">        case HANDLE_CHECK_ACTIVITY:  </span><br><span class="line">            if(isHome()) &#123;  </span><br><span class="line">                if(!isAdded) &#123;  </span><br><span class="line">                    windowManager.addView(btnView, params);  </span><br><span class="line">                    isAdded &#x3D; true;  </span><br><span class="line">                new Thread(new Runnable() &#123;  </span><br><span class="line">                    public void run() &#123;  </span><br><span class="line">                        for(int i&#x3D;0;i&lt;10;i++)&#123;  </span><br><span class="line">                            try &#123;  </span><br><span class="line">                                Thread.sleep(1000);  </span><br><span class="line">                            &#125; catch (InterruptedException e) &#123;e.printStackTrace();&#125;  </span><br><span class="line">                            Message m &#x3D; new Message();  </span><br><span class="line">                            m.what&#x3D;2;  </span><br><span class="line">                            mHandler.sendMessage(m);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                &#125;).start();&#125;  </span><br><span class="line">            &#125; else &#123;  </span><br><span class="line">                if(isAdded) &#123;  </span><br><span class="line">                    windowManager.removeView(btnView);  </span><br><span class="line">                    isAdded &#x3D; false;  </span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">            mHandler.sendEmptyMessageDelayed(HANDLE_CHECK_ACTIVITY, 0);  </span><br><span class="line">            break;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>最后要做的一件事,就是重写Service的onStartCommand( )方法了,就是做判断,取出Intent中的 数据,判断是需要添加悬浮框,还是要移除悬浮框!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Override  </span><br><span class="line">public int onStartCommand(Intent intent, int flags, int startId) &#123;  </span><br><span class="line">    int operation &#x3D; intent.getIntExtra(OPERATION, OPERATION_SHOW);  </span><br><span class="line">    switch(operation) &#123;  </span><br><span class="line">    case OPERATION_SHOW:  </span><br><span class="line">        mHandler.removeMessages(HANDLE_CHECK_ACTIVITY);  </span><br><span class="line">        mHandler.sendEmptyMessage(HANDLE_CHECK_ACTIVITY);  </span><br><span class="line">        break;  </span><br><span class="line">    case OPERATION_HIDE:  </span><br><span class="line">        mHandler.removeMessages(HANDLE_CHECK_ACTIVITY);  </span><br><span class="line">        break;  </span><br><span class="line">    &#125;  </span><br><span class="line">    return super.onStartCommand(intent, flags, startId);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好的，至此，主要的工作就完成了，接下来就是一些零碎的东西了，用一个Activity 来启动这个Service：MainActivity.java：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends AppCompatActivity implements View.OnClickListener &#123;</span><br><span class="line"></span><br><span class="line">    private Button btn_on;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        bindViews();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void bindViews() &#123;</span><br><span class="line">        btn_on &#x3D; (Button) findViewById(R.id.btn_on);</span><br><span class="line">        btn_on.setOnClickListener(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">        switch (v.getId()) &#123;</span><br><span class="line">            case R.id.btn_on:</span><br><span class="line">                Intent mIntent &#x3D; new Intent(MainActivity.this, MainService.class);</span><br><span class="line">                mIntent.putExtra(MainService.OPERATION, MainService.OPERATION_SHOW);</span><br><span class="line">                startService(mIntent);</span><br><span class="line">                Toast.makeText(MainActivity.this, &quot;悬浮框已开启~&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接着AndroidManifest.xml加上权限，以及为MainService进行注册：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.SYSTEM_ALERT_WINDOW&quot; &#x2F;&gt;</span><br><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.GET_TASKS&quot; &#x2F;&gt;</span><br><span class="line">...</span><br><span class="line">&lt;service android:name&#x3D;&quot;.MainService&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure><br>好了，逻辑还是比较容易理解的~大家自己再看看吧~</p>
+<p>运行效果图：</p>
+<p><img src="img3.gif" alt="gif"></p>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2020/12/14/常用弹出对话框整理/" data-toggle="tooltip" data-placement="top" title="常用弹出对话框整理">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2020/05/19/Activity基础篇-启动模式详解/" data-toggle="tooltip" data-placement="top" title="Activity基础篇-启动模式详解">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <div class="comment_notes">
+                    <p>
+                        听首歌放松一下！
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/music-player/utill.js"></script>
+
+
+<script src="/js/music-player/jquery.min.js"></script>
+
+<!-- netease; qqkg -->
+<!--
+<script src="/js/music-player/player.js?library=config.music.library.js"></script>
+-->
+<script src="../../../../js/music-player/player.js?library=netease&music=https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html"></script>
+                
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-WindowManager介绍"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.WindowManager介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-如何获得WindowManager实例"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.如何获得WindowManager实例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-WindowManager使用实例："><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.WindowManager使用实例：</span></a></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#WindowManager" title="WindowManager">WindowManager</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://mp.weixin.qq.com/profile?src=3&amp;timestamp=1614955587&amp;ver=1&amp;signature=eEbJua32qZEmdlQtUN0PljoNGB*RyP7fMh0yYcjXWwEaI2OUzUht*MiqP6F7o2ME*4YxWj9iYcrpkeEkODTW3w==" target="_blank">微信公众号</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/itemuse">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    &copy;  2021 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://freedomyouth.gitee.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🍀&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
