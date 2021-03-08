@@ -125,8 +125,8 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">2.4k</span> and
-                                Reading Time <span class="post-count">10</span> Minutes
+                                Words <span class="post-count">2.3k</span> and
+                                Reading Time <span class="post-count">9</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -187,13 +187,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -208,14 +201,21 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
@@ -336,19 +336,8 @@
 <p>这时候运行该程序，点击按钮，这个activity就会被关闭。</p>
 <h3 id="十一-finish-和onDestroy-有什么区别"><a href="#十一-finish-和onDestroy-有什么区别" class="headerlink" title="十一.finish()和onDestroy()有什么区别"></a>十一.finish()和onDestroy()有什么区别</h3><p>从上面的代码运行结果来看，控制台上输出了“onDestroy方法被调用”，由此可见，在执行finish()时执行了onDestroy()方法。</p>
 <p>实际上他们的区别在于 onDestroy()是生命周期方法，是你的Activity结束的时候由Android系统调用的，你不能直接调用onDestroy()来结束你的Activity,一般做法是调用finish()。</p>
-<h3 id="十二-四种LaunchMode"><a href="#十二-四种LaunchMode" class="headerlink" title="十二.四种LaunchMode"></a>十二.四种LaunchMode</h3><p>史上最详细扔物线讲解<a href="https://www.bilibili.com/video/BV1CA41177Se" target="_blank" rel="noopener">Android 面试黑洞——当我按下 Home 键再切回来，会发生什么？</a>  </p>
-<p>清单配置文件中,可使用android:launchMode=”standard|singleInstance|single Task|singleTop”四种模式来控制Acivity任务栈。</p>
-<ol>
-<li><p>standard<br>每次激活Activity时(startActivity)，都创建Activity实例，并放入任务栈；<br><img src="img6.jpg" alt=""></p>
-</li>
-<li><p>singleTop<br>如果某个Activity自己激活自己，即任务栈栈顶就是该Activity，则不需要创建，其余情况都要创建Activity实例；<br><img src="img7.jpg" alt=""></p>
-</li>
-<li><p>singleTask<br>如果要激活的那个Activity在任务栈中存在该实例，则不需要创建，只需要把此Activity放入栈顶，并把该Activity以上的Activity实例都pop；<br><img src="img8.jpg" alt=""></p>
-</li>
-<li><p>singleInstance<br>singleInstance模式会将启动的Activity放置的不同的栈结构中。<br><img src="img9.jpg" alt=""></p>
-</li>
-</ol>
-<p>单独整理一篇<a href="https://freedomyouth.gitee.io/2021/03/08/Activity%E5%9F%BA%E7%A1%80%E7%AF%87-%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/">启动模式</a></p>
+<h3 id="十二-四种LaunchMode"><a href="#十二-四种LaunchMode" class="headerlink" title="十二.四种LaunchMode"></a>十二.四种LaunchMode</h3><p>清单配置文件中,可使用android:launchMode=”standard|singleInstance|single Task|singleTop”四种模式来控制Acivity任务栈。<br>单独整理一篇<a href="https://freedomyouth.gitee.io/2021/03/08//Activity基础篇-启动模式详解/">Activity基础篇-启动模式详解</a><br>史上最详细扔物线讲解<a href="https://www.bilibili.com/video/BV1CA41177Se" target="_blank" rel="noopener">Android 面试黑洞——当我按下 Home 键再切回来，会发生什么？</a>  </p>
+<h3 id="十三-保存数据"><a href="#十三-保存数据" class="headerlink" title="十三.保存数据"></a>十三.保存数据</h3><p>单独整理一篇<a href="https://freedomyouth.gitee.io/2017/12/21/Activity基础篇-保存数据/">Activity基础篇-保存数据</a></p>
 
                 
                 <hr>
@@ -356,7 +345,7 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2020/12/14/常用弹出对话框整理/" data-toggle="tooltip" data-placement="top" title="常用弹出对话框整理">&larr; Previous Post</a>
+                        <a href="/2020/05/19/Activity基础篇-启动模式详解/" data-toggle="tooltip" data-placement="top" title="Activity基础篇-启动模式详解">&larr; Previous Post</a>
                     </li>
                     
                     
@@ -474,7 +463,7 @@
           <strong class="toc-title">Contents</strong>
           
             
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-什么是Activity"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.什么是Activity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-activity的四种状态"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.activity的四种状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-activity的回调函数"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.activity的回调函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-activity的启动与销毁"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.activity的启动与销毁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#五-activity的暂停与恢复"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五.activity的暂停与恢复</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#六-activity的停止与重启"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六.activity的停止与重启</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#七-activity的生命周期"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">七.activity的生命周期</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#八-演示"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">八.演示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#九-如何创建一个activity"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">九.如何创建一个activity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十-如何关闭一个activity"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">十.如何关闭一个activity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十一-finish-和onDestroy-有什么区别"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">十一.finish()和onDestroy()有什么区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十二-四种LaunchMode"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">十二.四种LaunchMode</span></a></li></ol>
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-什么是Activity"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.什么是Activity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-activity的四种状态"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.activity的四种状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-activity的回调函数"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.activity的回调函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-activity的启动与销毁"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.activity的启动与销毁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#五-activity的暂停与恢复"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五.activity的暂停与恢复</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#六-activity的停止与重启"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六.activity的停止与重启</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#七-activity的生命周期"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">七.activity的生命周期</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#八-演示"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">八.演示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#九-如何创建一个activity"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">九.如何创建一个activity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十-如何关闭一个activity"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">十.如何关闭一个activity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十一-finish-和onDestroy-有什么区别"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">十一.finish()和onDestroy()有什么区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十二-四种LaunchMode"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">十二.四种LaunchMode</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#十三-保存数据"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">十三.保存数据</span></a></li></ol>
             
           
           </div>

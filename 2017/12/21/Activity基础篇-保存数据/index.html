@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="my code warehouse">
+    <meta name="keyword"  content="hero world">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          Activity基础篇-保存数据 - Freedom Youth
+        
+    </title>
+
+    <link rel="canonical" href="http://freedomyouth.gitee.io/2017/12/21/Activity基础篇-保存数据/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS --> 
+    
+        
+<link rel="stylesheet" href="/css/dusign-light.css">
+
+        
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+
+        
+<link rel="stylesheet" href="/css/font-awesome.css">
+
+        
+<link rel="stylesheet" href="/css/toc.css">
+
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- photography -->
+    
+<link rel="stylesheet" href="/css/photography.css">
+
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../../img/default.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Activity" title="Activity">Activity</a>
+                            
+                        </div>
+                        <h1>Activity基础篇-保存数据</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by  on
+                            2017-12-21
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">2.3k</span> and
+                                Reading Time <span class="post-count">9</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="一-有哪些状态是需要保存的"><a href="#一-有哪些状态是需要保存的" class="headerlink" title="一.有哪些状态是需要保存的"></a>一.有哪些状态是需要保存的</h3><p>有哪些状态是需要保存的呢？最简单明了的就是对一些数据的保存，比如你正在操作一些数据，当面临突发情况，你的数据还没有操作完，这时候你就需要将数据进行保存，以便我们再次回到这个页面的时候不用重头再来。</p>
+<h3 id="二-什么情况下需要Activity状态的保存与恢复"><a href="#二-什么情况下需要Activity状态的保存与恢复" class="headerlink" title="二.什么情况下需要Activity状态的保存与恢复"></a>二.什么情况下需要Activity状态的保存与恢复</h3><p>那么在什么情况下需要对Activity的状态进行保存与恢复呢？官方文档的说法是在处理运行时配置变更的时候，来看官方文档介绍的一段话<br>有些设备配置可能会在运行时发生变化（例如屏幕方向、键盘可用性及语言）。 发生这种变化时，Android 会重启正在运行的 Activity（先后调用 onDestroy() 和 onCreate()）。重启行为旨在通过利用与新设备配置匹配的备用资源自动重新加载您的应用，来帮助它适应新配置。<br>要妥善处理重启行为，Activity 必须通过常规的Activity 生命周期恢复其以前的状态，在 Activity 生命周期中，Android 会在销毁 Activity 之前调用 onSaveInstanceState()，以便您保存有关应用状态的数据。 然后，您可以在 onCreate() 或 onRestoreInstanceState() 期间恢复 Activity 状态。<br>这里面提到了各种回调方法，其中也有本文介绍的重点，不急，我们一步步来，首先我总结有如下几种情况是需要对数据进行保存的 </p>
+<ul>
+<li>点击了返回键 </li>
+<li>锁屏 </li>
+<li>点击home键 </li>
+<li>有其他APP进入前台（比如接听电话） </li>
+<li>启动了新的Activity </li>
+<li>屏幕方向发生旋转 </li>
+<li>APP被杀死</li>
+</ul>
+<h3 id="三-状态为什么会丢失"><a href="#三-状态为什么会丢失" class="headerlink" title="三.状态为什么会丢失"></a>三.状态为什么会丢失</h3><p>紧接着，我们来说一下为什么状态会丢失，这里面到底发什么了什么操作？这里我们用代码来演示一下，就是一个Activity，我们复写它的onCreat和onDestroy方法，分别打上log，然后启动再点击旋转屏幕（本文主要以屏幕旋转为例）看看这个过程方法是如何执行的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">11-25 12:51:27.419 4153-4153&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onCreate</span><br><span class="line">11-25 12:51:33.459 4153-4153&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onDestroy</span><br><span class="line">11-25 12:51:33.539 4153-4153&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onCreate</span><br></pre></td></tr></table></figure>
+<p>我们从log中可知，当应用启动，首先运行onCreat方法，当我们点击旋转屏幕会发现当前的Activity被销毁了，然后又重新执行了onCreat方法，这是怎么回事，Activity发生了什么样的变化呢？我们在log中打印出当前Activity的hashcodekankan。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">11-25 12:57:20.934 4439-4439&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onCreatecom.ithuangqing.activitysavedemo.MainActivity@4a79f318</span><br><span class="line">11-25 12:57:26.184 4439-4439&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onDestroycom.ithuangqing.activitysavedemo.MainActivity@4a79f318</span><br><span class="line">11-25 12:57:26.224 4439-4439&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onCreatecom.ithuangqing.activitysavedemo.MainActivity@4a7d4274</span><br></pre></td></tr></table></figure>
+<p>原来当点击了屏幕旋转之后，当前Activity会被销毁，然后会重新创建一个新的Activity，如此一来我们在之前Activity的数据如果不保存的话就又可能丢失了。<br>好了，到了这一步你至少要明白这么一件事，就是当在第二部分中说的几种情况出现时比如屏幕发生旋转，当前的Activity会被销毁而且会重新创建一个全新的Activity。<br>下面我们举一个数据丢失的例子，让你看的更清楚。首先设置布局，布局很简单，一个文本框，一个按钮，给按钮设置一个点击事件，点击按钮让文本框中的数字从一递增。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">    super.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    mMNumber &#x3D; findViewById(R.id.number);</span><br><span class="line">    mBtAdd &#x3D; findViewById(R.id.btAdd);</span><br><span class="line">    mBtAdd.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onClick(View v) &#123;</span><br><span class="line">            a &#x3D; ++a;</span><br><span class="line">            mMNumber.setText(&quot;&quot;+a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    Log.d(TAG, &quot;onCreate&quot;+this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行之后点击按钮，如图<br><img src="0.png" alt="IMAGE"></p>
+<p>现在文本框中的数字是5，接下来我们点击屏幕旋转看看会发生什么，如图<br><img src="1.png" alt="IMAGE"></p>
+<p>果不其然，数据丢失了。</p>
+<h3 id="四-如何保存与恢复"><a href="#四-如何保存与恢复" class="headerlink" title="四.如何保存与恢复"></a>四.如何保存与恢复</h3><p>既然数据会丢失，那么我们该如何保存数据，或者如何解决这些问题呢？我们拿屏幕旋转这个变更来说，首先我们知道，如果屏幕发生旋转，当前Activity会被销毁，因此我们可以限定屏幕的方向，这样一来即使我们点击屏幕旋转，屏幕的方向是没有发什么变化的，所以Activity不会被销毁，数据自然不会丢失，另外一种方法就是我们可以自己处理变更，我们可以在当前的Activity的配置文件中添加这么一行代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:configChanges&#x3D;&quot;orientation|screenSize|keyboard&quot;</span><br></pre></td></tr></table></figure>
+<p>这句代码的意思就是告诉系统我们自己来处理变更，这两种方法不是今天的主菜，真正的主菜是onSaveInstanceState和onRestoreInstanceState，终于说到我们的重点了，我相信看完本文的介绍，大家会对这个东西有种终于认识的感觉，那就是每次创建Axtivity中自动创建的onCreat方法中的参数。首先我们在我们的Acticiry中复写 onSaveInstanceState 和 onRestoreInstanceState 同时打上log。看一下 输出。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">11-25 13:38:57.383 5242-5242&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onCreate</span><br><span class="line">11-25 13:39:13.133 5242-5242&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onSaveInstanceState</span><br><span class="line">11-25 13:39:13.133 5242-5242&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onDestroy</span><br><span class="line">11-25 13:39:13.163 5242-5242&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onCreate</span><br><span class="line">11-25 13:39:13.163 5242-5242&#x2F;com.ithuangqing.activitysavedemo D&#x2F;mainactivity--vv: onRestoreInstanceState</span><br></pre></td></tr></table></figure>
+<p>从log中我们可以看到，当我们点击屏幕旋转之后，在当前Activity被销毁之前会调用onSaveInstanceState，然后销毁当前Activity，创建新的Activity之后会调用onCreat方法之后会紧接着调用onRestoreInstanceState，那么这两个方法有什么用呢？其实也可以猜到，onSaveInstanceState是用来保存我们当前activity中的数据的，而onRestoreInstanceState可以让我们获取之前保存的数据从而在新的activity中进行设置。<br>那数据以何种形式进行保存呢？我们来看下这两个函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> @Override</span><br><span class="line"> public void onSaveInstanceState(Bundle outState) &#123;</span><br><span class="line">     super.onSaveInstanceState(outState);</span><br><span class="line">     &#x2F;&#x2F;保存销毁之前的数据</span><br><span class="line"></span><br><span class="line">     Log.d(TAG, &quot;onSaveInstanceState&quot;);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line"> protected void onRestoreInstanceState(Bundle savedInstanceState) &#123;</span><br><span class="line">     super.onRestoreInstanceState(savedInstanceState);</span><br><span class="line">     Log.d(TAG, &quot;onRestoreInstanceState&quot;);   </span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>我们发现他们的参数是Bundle，有印象了吧！我们就是通过Bundle来进行数据保存和读取的，大家都知道这是一种键值对的保存与读取方式。<br>接下来再看一个函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">    super.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    mMNumber &#x3D; findViewById(R.id.number);</span><br><span class="line">    mBtAdd &#x3D; findViewById(R.id.btAdd);</span><br><span class="line">    mBtAdd.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onClick(View v) &#123;</span><br><span class="line">            a &#x3D; ++a;</span><br><span class="line">            mMNumber.setText(&quot;&quot;+a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    Log.d(TAG, &quot;onCreate&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看看onCreat函数的参数，你发现了什么嘛？前面说过我们可以在onRestoreInstanceState中通过Bundle拿到我们之前保存的数据，其实在onCreat中也能达到相同的效果。<br>下面我们就具体代码演示一遍吧！<br>首先是在onSaveInstanceState中保存数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onSaveInstanceState(Bundle outState) &#123;</span><br><span class="line">      super.onSaveInstanceState(outState);</span><br><span class="line">      &#x2F;&#x2F;保存销毁之前的数据</span><br><span class="line">      outState.putString(&quot;number&quot;,mMNumber.getText().toString());</span><br><span class="line">      Log.d(TAG, &quot;onSaveInstanceState&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>紧接着在onRestoreInstanceState对数据进行恢复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line"> protected void onRestoreInstanceState(Bundle savedInstanceState) &#123;</span><br><span class="line">     super.onRestoreInstanceState(savedInstanceState);</span><br><span class="line">     Log.d(TAG, &quot;onRestoreInstanceState&quot;);</span><br><span class="line">     &#x2F;&#x2F;恢复数据</span><br><span class="line">    String s &#x3D; savedInstanceState.getString(&quot;number&quot;);</span><br><span class="line">    mMNumber.setText(s);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>接下来运行程序</p>
+<p><img src="2.png" alt="IMAGE"><br>然后我们旋转屏幕<br><img src="3.png" alt="IMAGE"></p>
+<p>发现数据被成功保留了下来，<br>到这里我们总结一下这个方法的调用过程，当运行时配置发生变更的时候，程序总的会销毁当前的Activity，然后重新创建一个新的Activity，在这个过程中，销毁当前Activity之前会先调用onSaveInstanceState让我们来保存数据，然后重建Activity在调用onCreat方发之后会调用onRestoreInstanceState让我们来对数据进行恢复，当然也可以在onCret中进行数据恢复，方法原理相同。</p>
+<h3 id="五-这个知识点你需要注意的地方"><a href="#五-这个知识点你需要注意的地方" class="headerlink" title="五.这个知识点你需要注意的地方"></a>五.这个知识点你需要注意的地方</h3><p>通过以上的讲诉，相信你对Activity状态的保存与恢复已经掌握的差不多了，在这里我再补充几点<br><strong>关于onSaveInstanceState </strong></p>
+<p>这个方法默认情况下会自动保存有关Activity的视图层次结构的状态信息，简单举个例子，我们以系统控件EditText来说，系统默认会保存有关这个控件的一个信息，也就是当你在这个控件中输入内容的时候，即使旋转屏幕内容也不会丢失，因为系统已经默认为其实现了我们说的那两个方法，但是有个前提，这个控件必须设置id，否则数据依旧会丢失，另外如果你重写了onRestoreInstanceState也要保证必须有这行代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super.onRestoreInstanceState(savedInstanceState);</span><br></pre></td></tr></table></figure>
+<p><strong>关于旋转屏幕无法调用onSaveInstanceState的问题。</strong></p>
+<p>出现这种问题你复写的肯定以下方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void onSaveInstanceState (Bundle outState, PersistableBundle outPersistentState)；</span><br></pre></td></tr></table></figure>
+<p>改成以下方法即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void onSaveInstanceState (Bundle outState)；</span><br></pre></td></tr></table></figure>
+<hr>
+<p>来自<a href="http://blog.csdn.net/sinat_33921105" target="_blank" rel="noopener">博客</a></p>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/01/17/MarkDown基本语法/" data-toggle="tooltip" data-placement="top" title="MarkDown基本语法">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/11/08/SQLite的介绍及使用/" data-toggle="tooltip" data-placement="top" title="SQLite的介绍及使用">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <div class="comment_notes">
+                    <p>
+                        听首歌放松一下！
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/music-player/utill.js"></script>
+
+
+<script src="/js/music-player/jquery.min.js"></script>
+
+<!-- netease; qqkg -->
+<!--
+<script src="/js/music-player/player.js?library=config.music.library.js"></script>
+-->
+<script src="../../../../js/music-player/player.js?library=netease&music=https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html"></script>
+                
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-有哪些状态是需要保存的"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.有哪些状态是需要保存的</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-什么情况下需要Activity状态的保存与恢复"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.什么情况下需要Activity状态的保存与恢复</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-状态为什么会丢失"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.状态为什么会丢失</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-如何保存与恢复"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.如何保存与恢复</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#五-这个知识点你需要注意的地方"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五.这个知识点你需要注意的地方</span></a></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Activity" title="Activity">Activity</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://mp.weixin.qq.com/profile?src=3&amp;timestamp=1614955587&amp;ver=1&amp;signature=eEbJua32qZEmdlQtUN0PljoNGB*RyP7fMh0yYcjXWwEaI2OUzUht*MiqP6F7o2ME*4YxWj9iYcrpkeEkODTW3w==" target="_blank">微信公众号</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/itemuse">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    &copy;  2021 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://freedomyouth.gitee.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🍀&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
