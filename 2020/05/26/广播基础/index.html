@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="my code warehouse">
+    <meta name="keyword"  content="hero world">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          广播基础 - Freedom Youth
+        
+    </title>
+
+    <link rel="canonical" href="http://freedomyouth.gitee.io/2020/05/26/广播基础/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS --> 
+    
+        
+<link rel="stylesheet" href="/css/dusign-light.css">
+
+        
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+
+        
+<link rel="stylesheet" href="/css/font-awesome.css">
+
+        
+<link rel="stylesheet" href="/css/toc.css">
+
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- photography -->
+    
+<link rel="stylesheet" href="/css/photography.css">
+
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../../img/default.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#广播" title="广播">广播</a>
+                            
+                        </div>
+                        <h1>广播基础</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by  on
+                            2020-05-26
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">4.4k</span> and
+                                Reading Time <span class="post-count">19</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="一-广播"><a href="#一-广播" class="headerlink" title="一.广播"></a>一.广播</h3><ul>
+<li><p>广播的生命周期很短，经过调用对象—&gt;实现onReceive—&gt;结束，整个过程就结束了。从实现的复杂度和代码量来看，广播无疑是最迷你的Android 组件，实现往往只需几行代码。广播对象被构造出来后通常只执行BroadcastReceiver.onReceive方法，便结束了其生命周期。所以有的时候我们可以把它当做函数看也未必不可。</p>
+</li>
+<li><p>和所有组件一样，广播对象也是在应用进程的主线程中被构造，所以广播对象的执行必须是要同步且快速的。也不推荐在里面开子线程，因为往往线程还未结束，广播对象就已经执行完毕被系统销毁。如果需要完成一项比较耗时的工作 , 应该通过发送 Intent 给 Service, 由 Service 来完成。</p>
+</li>
+<li>每次广播到来时 , 会重新创建 BroadcastReceiver 对象 , 并且调用 onReceive() 方法 , 执行完以后 , 该对象即被销毁 . 当 onReceive() 方法在 10 秒内没有执行完毕， Android 会认为该程序无响应。</li>
+</ul>
+<h3 id="二-接收系统广播："><a href="#二-接收系统广播：" class="headerlink" title="二.接收系统广播："></a>二.接收系统广播：</h3><p>广播接收器可以自由地对自己感兴趣的广播进行注册，这样当有相应的广播发出时，广播接收器就能收到该广播，并在内部处理相应的逻辑。注册广播的方式有两种，在代码中注册和在清单文件中注册，前者称为动态注册，后者称为静态注册。</p>
+<ol>
+<li><p>动态注册监听网络变化：<br>新建工程文件，首先在MainActivity中定义一个内部类netWorkChangeReceiver，并重写父类的onReceive()方法，这样每当网络状态发生变化时，onReceive()方法就会得到执行，这里使用Toast提示一段文本信息，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class netWorkChangeReceiver extends BroadcastReceiver &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">            Toast.makeText(context, &quot;network changes&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>紧接着在onCreate方法中进行动态注册，然后在onDestroy方法中进行取消注册：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> private IntentFilter intentFilter;</span><br><span class="line"> private netWorkChangeReceiver netWorkChangeReceiver;</span><br><span class="line"> </span><br><span class="line"> @Override</span><br><span class="line"> protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">     super.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">     </span><br><span class="line">     &#x2F;&#x2F;动态注册：创建一个IntentFilter的实例，添加网络变化的广播(功能是对组件进行过滤，只获取需要的消息)</span><br><span class="line">    intentFilter &#x3D; new IntentFilter();</span><br><span class="line">    intentFilter.addAction(&quot;android.net.conn.CONNECTIVITY_CHANGE&quot;);</span><br><span class="line">   &#x2F;&#x2F;创建NetWorkChangeReceiver的实例，并调用registerReceiver()方法进行注册</span><br><span class="line">   netWorkChangeReceiver &#x3D; new netWorkChangeReceiver();</span><br><span class="line">    registerReceiver(netWorkChangeReceiver, intentFilter);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;取消注册，一定要记得，不然系统会报错</span><br><span class="line">@Override</span><br><span class="line">protected void onDestroy() &#123;</span><br><span class="line">    super.onDestroy();</span><br><span class="line">    unregisterReceiver(netWorkChangeReceiver);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上方代码解释如下：<br>11行：给意图过滤器intentFilter添加一个值为android.net.conn.CONNECTIVITY_CHANGE的action。因为每当网络状态发生变化时，系统就会发出一条值为android.net.conn.CONNECTIVITY_CHANG的广播。<br>注：最后要记得，动态注册的广播接收器一定要取消注册才行。<br>运行程序，就可以了。<br>不过只是提醒网络发生变化还不够人性化，为了能够准确的告诉用户当前是有网络还是没有网络，我们还需要对上述代码进一步优化，修改netWorkChangeReceiver中的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class netWorkChangeReceiver extends BroadcastReceiver &#123;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">        &#x2F;&#x2F;通过getSystemService()方法得到connectionManager这个系统服务类，专门用于管理网络连接</span><br><span class="line">        ConnectivityManager connectionManager &#x3D; (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);</span><br><span class="line">        NetworkInfo networkInfo &#x3D; connectionManager.getActiveNetworkInfo();</span><br><span class="line">        if(networkInfo !&#x3D; null &amp;&amp; networkInfo.isAvailable())&#123;</span><br><span class="line">            Toast.makeText(context, &quot;network is available&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            Toast.makeText(context, &quot;network is unavailable&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上方代码解释：<br>06行：在onReceive()方法中，首先通过通过getSystemService()方法得到connectionManager这个系统服务类，专门用于管理网络连接。<br>07行：然后调用它的getActiveNetworkInfo()方法可以得到NetworkInfo的实例，接着调用NetworkInfo的isAvailable()方法，就可以判断当前是否有网络了，最后通过Toast提示用户。<br>另外，查询系统的网络状态是需要申明权限的，打开清单文件，添加如下权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.ACCESS_NETWORK_STATE&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<p>注：访问<a href="http://developer.android.com/reference/android/Manifest.permission.html可以查看Android系统所有的可声明的权限。" target="_blank" rel="noopener">http://developer.android.com/reference/android/Manifest.permission.html可以查看Android系统所有的可声明的权限。</a><br>现在运行程序，就可以了。<br>上方程序完整版代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package com.example.m05_broadcastreceiver01;</span><br><span class="line">import android.app.Activity;</span><br><span class="line">import android.content.BroadcastReceiver;</span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.content.IntentFilter;</span><br><span class="line">import android.net.ConnectivityManager;</span><br><span class="line">import android.net.NetworkInfo;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line">public class MainActivity extends Activity &#123;</span><br><span class="line">    private IntentFilter intentFilter;</span><br><span class="line">    private netWorkChangeReceiver netWorkChangeReceiver;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        &#x2F;&#x2F; 动态注册：创建一个IntentFilter的实例，添加网络变化的广播</span><br><span class="line">        intentFilter &#x3D; new IntentFilter();</span><br><span class="line">        intentFilter.addAction(&quot;android.net.conn.CONNECTIVITY_CHANGE&quot;);</span><br><span class="line">        &#x2F;&#x2F; 创建NetWorkChangeReceiver的实例，并调用registerReceiver()方法进行注册</span><br><span class="line">        netWorkChangeReceiver &#x3D; new netWorkChangeReceiver();</span><br><span class="line">        registerReceiver(netWorkChangeReceiver, intentFilter);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 取消注册，一定要记得，不然系统会报错</span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">        unregisterReceiver(netWorkChangeReceiver);</span><br><span class="line">    &#125;</span><br><span class="line">    class netWorkChangeReceiver extends BroadcastReceiver &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">            &#x2F;&#x2F;通过getSystemService()方法得到connectionManager这个系统服务类，专门用于管理网络连接</span><br><span class="line">            ConnectivityManager connectionManager &#x3D; (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);</span><br><span class="line">            NetworkInfo networkInfo &#x3D; connectionManager.getActiveNetworkInfo();</span><br><span class="line">            if(networkInfo !&#x3D; null &amp;&amp; networkInfo.isAvailable())&#123;</span><br><span class="line">                Toast.makeText(context, &quot;network is available&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                Toast.makeText(context, &quot;network is unavailable&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>静态注册实现开机启动：<br>动态注册的方式比较灵活，但缺点是：必须在程序启动之后才能接收到广播，因为注册的逻辑是写在onCreate()方法中的。为了让程序在未启动的情况下就能接收到广播，这里就需要使用到静态注册。<br>这里我们准备让程序接收一条开机广播，当收到这条广播时，就可以在onReceive()方法中执行相应的逻辑，从而实现开机启动的功能。<br>新建一个类：BootCompleteReceiver，让他继承BroadcastReceiver，在onReceive()方法中简单地Toast一下，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class BootCompleteReceiver extends BroadcastReceiver &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">        Toast.makeText(context, &quot;Boot Complete&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到，这里不再使用内部类的方式来定义广播接收器，因为稍后我们需要在清单文件AndroidManifest.xml中将这个广播接收器的类名注册进去。<br>然后修改清单文件AndroidManifest.xml，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-sdk</span><br><span class="line">        android:minSdkVersion&#x3D;&quot;8&quot;</span><br><span class="line">        android:targetSdkVersion&#x3D;&quot;16&quot; &#x2F;&gt;</span><br><span class="line">    &lt;uses-permission android:name&#x3D;&quot;android.permission.ACCESS_NETWORK_STATE&quot;&#x2F;&gt;</span><br><span class="line">    &lt;uses-permission android:name&#x3D;&quot;android.permission.RECEIVE_BOOT_COMPLETED&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;application</span><br><span class="line">        android:allowBackup&#x3D;&quot;true&quot;</span><br><span class="line">        android:icon&#x3D;&quot;@drawable&#x2F;ic_launcher&quot;</span><br><span class="line">        android:label&#x3D;&quot;@string&#x2F;app_name&quot;</span><br><span class="line">        android:theme&#x3D;&quot;@style&#x2F;AppTheme&quot; &gt;</span><br><span class="line">        &lt;activity</span><br><span class="line">            android:name&#x3D;&quot;com.example.m05_broadcastreceiver01.MainActivity&quot;</span><br><span class="line">            android:label&#x3D;&quot;@string&#x2F;app_name&quot; &gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name&#x3D;&quot;android.intent.action.MAIN&quot; &#x2F;&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name&#x3D;&quot;android.intent.category.LAUNCHER&quot; &#x2F;&gt;</span><br><span class="line">            &lt;&#x2F;intent-filter&gt;</span><br><span class="line">        &lt;&#x2F;activity&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;receiver android:name&#x3D;&quot;.BootCompleteReceiver&quot;&gt;</span><br><span class="line">            &lt;intent-filter &gt;</span><br><span class="line">                &lt;action android:name&#x3D;&quot;android.intent.action.BOOT_COMPLETED&quot;&#x2F;&gt;</span><br><span class="line">            &lt;&#x2F;intent-filter&gt;</span><br><span class="line">        &lt;&#x2F;receiver&gt;</span><br><span class="line">    &lt;&#x2F;application&gt;</span><br></pre></td></tr></table></figure>
+<p>代码解释如下：<br>终于，<application>标签内多了个子标签<receiver>，所有的静态注册的广播接收器都是在这里进行注册的。<br>22行：name中为广播接收器的名字<br>24行：想要接收的广播。Android系统启动完成后，会发出这条名为android.intent.action.BOOT_COMPLETED的广播。<br>05行：监听系统开机广播需要声明权限。<br>运行程序后，将手机关机重启，就能收到这条广播了。</p>
+</li>
+</ol>
+<h3 id="三-发送自定义广播"><a href="#三-发送自定义广播" class="headerlink" title="三.发送自定义广播"></a>三.发送自定义广播</h3><ol>
+<li><p>发送标准广播　　<br>新建工程文件。在发广播之前，我们先定义一个广播接收器来接收此广播才行。因此，新建一个类：MyBroadcastReceiver，让他继承BroadcastReceiver，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class MyBroadcastReceiver extends BroadcastReceiver &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">        Toast.makeText(context, &quot;received in MyBroadcastReceiver&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里，当MyBroadcastReceiver 收到自定义的广播时，就会执行onReceive()方法中的逻辑，弹出一个Toast。<br>紧接着，要在清单文件AndroidManifest.xml中对这个广播接收器进行注册：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;application</span><br><span class="line">    android:allowBackup&#x3D;&quot;true&quot;</span><br><span class="line">    android:icon&#x3D;&quot;@drawable&#x2F;ic_launcher&quot;</span><br><span class="line">    android:label&#x3D;&quot;@string&#x2F;app_name&quot;</span><br><span class="line">    android:theme&#x3D;&quot;@style&#x2F;AppTheme&quot; &gt;</span><br><span class="line">    &lt;activity</span><br><span class="line">        android:name&#x3D;&quot;com.example.m05_broadcastreceiver02.MainActivity&quot;</span><br><span class="line">        android:label&#x3D;&quot;@string&#x2F;app_name&quot; &gt;</span><br><span class="line">        &lt;intent-filter&gt;</span><br><span class="line">            &lt;action android:name&#x3D;&quot;android.intent.action.MAIN&quot; &#x2F;&gt;</span><br><span class="line"> </span><br><span class="line">            &lt;category android:name&#x3D;&quot;android.intent.category.LAUNCHER&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;intent-filter&gt;</span><br><span class="line">    &lt;&#x2F;activity&gt;</span><br><span class="line">    </span><br><span class="line">   &lt;receiver android:name&#x3D;&quot;.MyBroadcastReceiver&quot;&gt;</span><br><span class="line">        &lt;intent-filter &gt;</span><br><span class="line">            &lt;action android:name&#x3D;&quot;com.example.m05_broadcastreceiver02.MY_BROADCAST&quot;&#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;intent-filter&gt;</span><br><span class="line">    &lt;&#x2F;receiver&gt;</span><br><span class="line">&lt;&#x2F;application&gt;</span><br></pre></td></tr></table></figure>
+<p>代码解释：<br>18行：让MyBroadcastReceiver接收一条值为om.example.m05_broadcastreceiver02.MY_BROADCAST的广播，因此待会儿在发送广播的时候，我们就需要发出这样的一条广播。<br>紧接着，修改activity.xml中的代码，添加一个按钮Button。<br>然后，修改MainActivity.java中的代码，添加Button的监听事件：点击按钮时，发送广播</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Button button1&#x3D;(Button)findViewById(R.id.button1);</span><br><span class="line">button1.setOnClickListener(new OnClickListener() &#123;            </span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">        Intent intent &#x3D;new Intent(&quot;com.example.m05_broadcastreceiver02.MY_BROADCAST&quot;);</span><br><span class="line">        sendBroadcast(intent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>总结：可以看到，点击按钮时，发送com.example.m05_broadcastreceiver02.MY_BROADCAST这条广播，这样，所有能够监听com.example.m05_broadcastreceiver02.MY_BROADCAST这条广播的广播接收器就都会同时收到消息，此时发出去的就是一条标准广播，即无序广播。所以接下来就需要讲到有序广播。</p>
+</li>
+<li><p>发送有序广播：<br>广播是一种可以跨进程的通信方式，其他应用程序是可以收到的。现在我们来发一条有序广播。<br>有序广播不仅有先后顺序，而且前面的广播还可以将后面的广播截断。<br>在3.1的代码基础之上，将按钮的监听事件修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Button button1&#x3D;(Button)findViewById(R.id.button1);</span><br><span class="line">button1.setOnClickListener(new OnClickListener() &#123;            </span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">        Intent intent &#x3D;new Intent(&quot;com.example.m05_broadcastreceiver02.MY_BROADCAST&quot;);</span><br><span class="line">        sendOrderedBroadcast(intent, null);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>即将06行代码修改一下，将sendBroadcast()方法改为sendOrderedBroadcast()方法，sendOrderedBroadcast()方法接收两个参数，第二个参数是一个与权限相关的字符串，这里传入null即可。<br>紧接着，修改清单文件AndroidManifest.xml中对广播接收器的注册，设置优先级：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;receiver android:name&#x3D;&quot;.MyBroadcastReceiver&quot;&gt;</span><br><span class="line">    &lt;intent-filter android:priority&#x3D;&quot;100&quot;&gt;</span><br><span class="line">       &lt;action android:name&#x3D;&quot;com.example.m05_broadcastreceiver02.MY_BROADCAST&quot;&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;intent-filter&gt;</span><br><span class="line">&lt;&#x2F;receiver&gt;</span><br></pre></td></tr></table></figure>
+<p>即添加第02行代码。可以看到，通过android:priority属性给广播接收器设置了优先级。这个属性的范围在-1000到1000，数值越大，优先级越高。<br>接下来，如果想要拦截这个广播，防止让后面的广播接收器也接收到了这个广播。可以修改MyBroadcastReceiver中的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class MyBroadcastReceiver extends BroadcastReceiver &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">        Toast.makeText(context, &quot;received in MyBroadcastReceiver&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">        abortBroadcast();&#x2F;&#x2F;拦截广播，防止后面的接收到</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>即添加第06行代码。如果在onReceive()方法中调用了abortBroadcast()方法，就表示是将这条广播拦截，后面的广播接收器将无法再接收到。<br>特别关注：<br>广播接收器的生命周期：关键在于BroadcastReceiver中的onReceive()方法，从onReceive()里的第一行代码开始，onReceive()里的最后一行代码结束。<br>一个广播到来的时候，用什么方式提醒用户是最友好的呢？第一种方式是吐司，第二种方式是通知。注：不要使用对话框，以免中断了用户正在进行的操作。</p>
+</li>
+</ol>
+<h3 id="四-使用本地广播："><a href="#四-使用本地广播：" class="headerlink" title="四.使用本地广播："></a>四.使用本地广播：</h3><p>之前我们发送和接收的广播全部都是属于全局广播，即发出去的广播可以被其他任何应用程序接收到，并且我们也可以接收来自于其他任何应用程序的广播。这样一来，必然会造成安全问题。于是便有了本地广播：即只能在本应用程序中发送和接收广播。这就要使用到了LocalBroadcastManager这个类来对广播进行管理。<br>我们修改2.1中动态注册广播接收器的代码，即修改MainActivity.java中的代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">package com.example.broadcasttest;</span><br><span class="line"></span><br><span class="line">import android.app.Activity;</span><br><span class="line">import android.content.BroadcastReceiver;</span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.content.IntentFilter;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.support.v4.content.LocalBroadcastManager;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.view.View.OnClickListener;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">public class MainActivity extends Activity &#123;</span><br><span class="line">    private IntentFilter intentFilter;</span><br><span class="line"></span><br><span class="line">    private LocalReceiver localReceiver;</span><br><span class="line"></span><br><span class="line">    private LocalBroadcastManager localBroadcastManager;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;通过LocalBroadcastManager的getInstance()方法得到它的一个实例</span><br><span class="line">        localBroadcastManager &#x3D; LocalBroadcastManager.getInstance(this);</span><br><span class="line">        Button button &#x3D; (Button) findViewById(R.id.button);</span><br><span class="line">        button.setOnClickListener(new OnClickListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View v) &#123;</span><br><span class="line">                Intent intent &#x3D; new Intent(</span><br><span class="line">                        &quot;com.example.broadcasttest.LOCAL_BROADCAST&quot;);</span><br><span class="line">                localBroadcastManager.sendBroadcast(intent);&#x2F;&#x2F;调用sendBroadcast()方法发送广播</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F;动态注册本地的广播接收器</span><br><span class="line">        intentFilter &#x3D; new IntentFilter();</span><br><span class="line">        intentFilter.addAction(&quot;com.example.broadcasttest.LOCAL_BROADCAST&quot;);</span><br><span class="line">        localReceiver &#x3D; new LocalReceiver();</span><br><span class="line">        localBroadcastManager.registerReceiver(localReceiver, intentFilter);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">        localBroadcastManager.unregisterReceiver(localReceiver);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class LocalReceiver extends BroadcastReceiver &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">            Toast.makeText(context, &quot;received local broadcast&quot;,</span><br><span class="line">                    Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>注：本地广播是无法通过静态注册的方式来接收的。其实也完全可以理解，因为静态注册主要就是为了让程序在未启动的情况下也能收到广播。而发送本地广播时，我们的程序肯定是已经启动了，没有必要使用到静态注册的功能。</p>
+<h3 id="五-各种各样的广播："><a href="#五-各种各样的广播：" class="headerlink" title="五.各种各样的广播："></a>五.各种各样的广播：</h3><p>在android中有很多系统自带的intent.action，通过监听这些事件我们可以完成很多功能。</p>
+<ol>
+<li>开机：<br>String BOOT_COMPLETED_ACTION 广播：在系统启动后。这个动作被广播一次（只有一次）。监听： <code>android.intent.action.BOOT_COMPLETED</code></li>
+<li>电话拨入：<br>String ANSWER_ACTION 动作：处理拨入的电话。监听： <code>android.intent.action.ANSWER</code></li>
+<li>电量变化：<br>String BATTERY_CHANGED_ACTION 广播：充电状态，或者电池的电量发生变化。监听： <code>android.intent.action.BATTERY_CHANGED</code></li>
+<li>日期改变：<br>String DATE_CHANGED_ACTION 广播：日期被改变。 监听：<code>android.intent.action.DATE_CHANGED</code></li>
+<li>取消更新下载：<br>String FOTA_CANCEL_ACTION 广播：取消所有被挂起的 (pending) 更新下载。 监听：<code>android.server.checkin.FOTA_CANCEL</code></li>
+<li>更新开始安装：<br>String FOTA_READY_ACTION 广播：更新已经被下载 可以开始安装。监听 <code>android.server.checkin.FOTA_READY</code></li>
+<li>主屏幕：<br>String HOME_CATEGORY 类别：主屏幕 (activity)。设备启动后显示的第一个 activity。 监听：”android.intent.category.HOME`</li>
+<li>新应用：<br>String PACKAGE_ADDED_ACTION 广播：设备上新安装了一个应用程序包。监听： <code>android.intent.action.PACKAGE_ADDED</code></li>
+<li>删除应用：<br>String PACKAGE_REMOVED_ACTION 广播：设备上删除了一个应用程序包。监听： <code>android.intent.action.PACKAGE_REMOVED</code></li>
+<li>屏幕关闭：<br>String SCREEN_OFF_ACTION 广播：屏幕被关闭。监听： <code>android.intent.action.SCREEN_OFF</code></li>
+<li>屏幕开启：<br>String SCREEN_ON_ACTION 广播：屏幕已经被打开。 监听：<code>android.intent.action.SCREEN_ON</code></li>
+<li>时区改变：<br>String TIMEZONE_CHANGED_ACTION 广播：时区已经改变。监听： <code>android.intent.action.TIMEZONE_CHANGED</code></li>
+<li>时间改变：<br>String TIME_CHANGED_ACTION 广播：时间已经改变（重新设置）。 <code>android.intent.action.TIME_SET</code></li>
+<li>时间流逝：<br>String TIME_TICK_ACTION 广播：当前时间已经变化（正常的时间流逝）。 <code>android.intent.action.TIME_TICK</code></li>
+<li>进入大容量存储模式：<br>String UMS_CONNECTED_ACTION 广播：设备进入 USB 大容量存储模式。 <code>android.intent.action.UMS_CONNECTED</code></li>
+<li>退出大容量存储模式：<br>String UMS_DISCONNECTED_ACTION 广播：设备从 USB 大容量存储模式退出。 <code>android.intent.action.UMS_DISCONNECTED</code></li>
+<li>壁纸改变：<br>String WALLPAPER_CHANGED_ACTION 广播：系统的墙纸已经改变。 <code>android.intent.action.WALLPAPER_CHANGED</code></li>
+<li>web搜索：<br>String WEB_SEARCH_ACTION 动作：执行 web 搜索。 <code>android.intent.action.WEB_SEARCH</code></li>
+<li>网络变化：<br>String CONNECTIVITY_CHANGE_ACTION 动作：网络变化。<code>android.intent.action.CONNECTIVITY_CHANGE_ACTION</code></li>
+</ol>
+<h3 id="六-实例：使用动态注册，监听手机的电量变化。"><a href="#六-实例：使用动态注册，监听手机的电量变化。" class="headerlink" title="六.实例：使用动态注册，监听手机的电量变化。"></a>六.实例：使用动态注册，监听手机的电量变化。</h3><p>完整版代码如下：</p>
+<ul>
+<li><p>activity_main.xml代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    xmlns:tools&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;tools&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:paddingBottom&#x3D;&quot;@dimen&#x2F;activity_vertical_margin&quot;</span><br><span class="line">    android:paddingLeft&#x3D;&quot;@dimen&#x2F;activity_horizontal_margin&quot;</span><br><span class="line">   android:paddingRight&#x3D;&quot;@dimen&#x2F;activity_horizontal_margin&quot;</span><br><span class="line">    android:paddingTop&#x3D;&quot;@dimen&#x2F;activity_vertical_margin&quot;</span><br><span class="line">    tools:context&#x3D;&quot;.MainActivity&quot; &gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;textView1&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:textSize&#x3D;&quot;30dp&quot;</span><br><span class="line">        android:gravity&#x3D;&quot;center&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MainActivity.java的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">package com.example.m05_broadcastreceiver02;</span><br><span class="line"></span><br><span class="line">import android.app.Activity;</span><br><span class="line">import android.content.BroadcastReceiver;</span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.content.IntentFilter;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.widget.TextView;</span><br><span class="line"></span><br><span class="line">public class MainActivity extends Activity &#123;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    private BatteryBroadcastReceiver batteryBroadcastReceiver;</span><br><span class="line">    private TextView textView;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        textView&#x3D;(TextView)findViewById(R.id.textView1);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;动态注册监听电量的广播接收器</span><br><span class="line">        IntentFilter intentFilter &#x3D; new IntentFilter();</span><br><span class="line">        intentFilter.addAction(&quot;android.intent.action.BATTERY_CHANGED&quot;);</span><br><span class="line">        batteryBroadcastReceiver &#x3D; new BatteryBroadcastReceiver();</span><br><span class="line">        registerReceiver(batteryBroadcastReceiver, intentFilter);       </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;取消注册监听电量的广播接收器</span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">        unregisterReceiver(batteryBroadcastReceiver);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;新建一个广播接收器，监听电量的变化</span><br><span class="line">    public class BatteryBroadcastReceiver extends BroadcastReceiver &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">            if(intent.getAction().equals(Intent.ACTION_BATTERY_CHANGED)) &#123;</span><br><span class="line">                &#x2F;&#x2F;获取当前电量</span><br><span class="line">                int level &#x3D; intent.getIntExtra(&quot;level&quot;, 0);</span><br><span class="line">                &#x2F;&#x2F;电量的总刻度</span><br><span class="line">                int scale &#x3D; intent.getIntExtra(&quot;scale&quot;, 100);</span><br><span class="line">                textView.setText(&quot;电池电量为&quot;+((level*100) &#x2F; scale)+&quot;%&quot;);</span><br><span class="line">                </span><br><span class="line">                &#x2F;&#x2F;当电量低时，可以进行一些操作，例如弹出通知等</span><br><span class="line">&#x2F;*                if(level&lt;15)&#123;</span><br><span class="line">                    do something</span><br><span class="line">                &#125;*&#x2F;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;         </span><br><span class="line">   &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>紧接着，在清单文件中进行权限声明：<br><uses-permission android:name="android.permission.BATTERY_STATS"/><br>MainActivity.java的代码解释如下：<br>40至45行：固定代码，用于获取当前电量<br>48至50行：当电量低时，可以进行一些操作，例如弹出通知等</p>
+</li>
+<li><p>运行后，界面如下：<br><img src="img.png" alt=""></p>
+</li>
+</ul>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2020/05/28/WindowManager基础/" data-toggle="tooltip" data-placement="top" title="WindowManager基础">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2020/05/25/Intent基础/" data-toggle="tooltip" data-placement="top" title="Intent基础">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <div class="comment_notes">
+                    <p>
+                        听首歌放松一下！
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/music-player/utill.js"></script>
+
+
+<script src="/js/music-player/jquery.min.js"></script>
+
+<!-- netease; qqkg -->
+<!--
+<script src="/js/music-player/player.js?library=config.music.library.js"></script>
+-->
+<script src="../../../../js/music-player/player.js?library=netease&music=https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html"></script>
+                
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-广播"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.广播</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-接收系统广播："><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.接收系统广播：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-发送自定义广播"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.发送自定义广播</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-使用本地广播："><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.使用本地广播：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#五-各种各样的广播："><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五.各种各样的广播：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#六-实例：使用动态注册，监听手机的电量变化。"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六.实例：使用动态注册，监听手机的电量变化。</span></a></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://mp.weixin.qq.com/profile?src=3&amp;timestamp=1614955587&amp;ver=1&amp;signature=eEbJua32qZEmdlQtUN0PljoNGB*RyP7fMh0yYcjXWwEaI2OUzUht*MiqP6F7o2ME*4YxWj9iYcrpkeEkODTW3w==" target="_blank">微信公众号</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/itemuse">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    &copy;  2021 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://freedomyouth.gitee.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;,&quot;youth&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
