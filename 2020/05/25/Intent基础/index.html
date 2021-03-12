@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          Intent基础 - Freedom Youth
+          Intent基础 - Freedomer
         
     </title>
 
-    <link rel="canonical" href="http://freedomyouth.gitee.io/2020/05/25/Intent基础/">
+    <link rel="canonical" href="http://freedomer.com.cn/2020/05/25/Intent基础/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -362,7 +362,7 @@
 <p>动作，可以将电子邮件的标题、正文等保存在extras里，传给电子邮件发送组件。</p>
 <h3 id="九-Flags（标志位）：期望这个意图的运行模式"><a href="#九-Flags（标志位）：期望这个意图的运行模式" class="headerlink" title="九.Flags（标志位）：期望这个意图的运行模式"></a>九.Flags（标志位）：期望这个意图的运行模式</h3><p>一个程序启动后系统会为这个程序分配一个task供其使用，另外同一个task里面可以拥有不同应用程序的activity。那么，同一个程序能不能拥有多个task？这就涉及到加载activity的启动模式，这个需要单独讲一下。</p>
 <p>注：android中一组逻辑上在一起的activity被叫做task，自己认为可以理解成一个activity堆栈。</p>
-<h3 id="十-Activity的启动模式："><a href="#十-Activity的启动模式：" class="headerlink" title="十.Activity的启动模式："></a>十.Activity的启动模式：</h3><p><a href="https://freedomyouth.gitee.io/2021/03/08//Activity基础篇-启动模式详解/">Activity基础篇-启动模式详解</a></p>
+<h3 id="十-Activity的启动模式："><a href="#十-Activity的启动模式：" class="headerlink" title="十.Activity的启动模式："></a>十.Activity的启动模式：</h3><p><a href="https://freedomyouth.gitee.io/2021/03/08//Activity基础篇-启动模式详解/" target="_blank" rel="noopener">Activity基础篇-启动模式详解</a></p>
 <p>其实我们不在清单文件中设置，只在代码中通过flag来设置也是可以的，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent &#x3D; new Intent(MainActivity.this,SecondActivity.class);</span><br><span class="line">&#x2F;&#x2F;相当于singleTask</span><br><span class="line">intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent &#x3D; new Intent(MainActivity.this,SecondActivity.class);</span><br><span class="line">&#x2F;&#x2F;相当于singleTop</span><br><span class="line">intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
@@ -611,7 +611,7 @@
 
                 
                     <li>
-                        <a target="_blank"  href="https://github.com/itemuse">
+                        <a target="_blank"  href="https://github.com/freedomer">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -680,7 +680,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://freedomyouth.gitee.io/js/jquery.tagcloud.js",function(){
+        async("http://freedomer.com.cn/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -752,7 +752,7 @@
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;,&quot;youth&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
         
 
         <!-- background effects end -->

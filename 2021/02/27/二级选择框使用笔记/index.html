@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          二级选择框使用笔记 - Freedom Youth
+          二级选择框使用笔记 - Freedomer
         
     </title>
 
-    <link rel="canonical" href="http://freedomyouth.gitee.io/2021/02/27/二级选择框使用笔记/">
+    <link rel="canonical" href="http://freedomer.com.cn/2021/02/27/二级选择框使用笔记/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -305,7 +305,7 @@
 <li><strong>确认框中处理</strong></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">private void showConfirmDialog()&#123;</span><br><span class="line">    final AlertDialog.Builder normalDialog &#x3D; new AlertDialog.Builder(this);</span><br><span class="line">    final String value &#x3D; ParentList.get(mParentmValue2)+&quot;&#x2F;&quot;+ChildLists.get(mParentmValue2).get(mChildValue);</span><br><span class="line">    normalDialog.setTitle(value);</span><br><span class="line">    normalDialog.setPositiveButton(&quot;OK&quot;,</span><br><span class="line">            new DialogInterface.OnClickListener() &#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void onClick(DialogInterface dialog, int which) &#123;</span><br><span class="line">                    mParentmValue &#x3D;  mParentmValue2;</span><br><span class="line">                    mChildValue &#x3D;  mChildValue2;</span><br><span class="line">                    Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">    ...</span><br><span class="line">    normalDialog.show();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="六-常用对话框笔记"><a href="#六-常用对话框笔记" class="headerlink" title="六.常用对话框笔记"></a>六.常用对话框笔记</h3><p><a href="https://freedomyouth.gitee.io/2020/12/14/%E5%B8%B8%E7%94%A8%E5%BC%B9%E5%87%BA%E5%AF%B9%E8%AF%9D%E6%A1%86%E6%95%B4%E7%90%86/">常用对话框笔记</a></p>
+<h3 id="六-常用对话框笔记"><a href="#六-常用对话框笔记" class="headerlink" title="六.常用对话框笔记"></a>六.常用对话框笔记</h3><p><a href="https://freedomyouth.gitee.io/2020/12/14/%E5%B8%B8%E7%94%A8%E5%BC%B9%E5%87%BA%E5%AF%B9%E8%AF%9D%E6%A1%86%E6%95%B4%E7%90%86/" target="_blank" rel="noopener">常用对话框笔记</a></p>
 
                 
                 <hr>
@@ -516,7 +516,7 @@
 
                 
                     <li>
-                        <a target="_blank"  href="https://github.com/itemuse">
+                        <a target="_blank"  href="https://github.com/freedomer">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -585,7 +585,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://freedomyouth.gitee.io/js/jquery.tagcloud.js",function(){
+        async("http://freedomer.com.cn/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -657,7 +657,7 @@
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;,&quot;youth&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
         
 
         <!-- background effects end -->
