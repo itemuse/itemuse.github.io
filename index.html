@@ -359,9 +359,9 @@ Zip
 Zip
 Test
 
-二.准备工作
+二.引用
 将JitPack存储库添加到您的构建文件中将其添加到存储库末尾的root build.gradle中：
-123456allprojects &#123;      repositories &#123;      ...      maven &#123; url &#39;https:&#x2F;&#x2F;jitpack.io&#39; &......
+123456allprojects &#123;      repositories &#123;      ...      maven &#123; url &#39;https:&#x2F;&#x2F;jitpack.io&#39; &#1......
                 </div>
             </a>
             
@@ -399,9 +399,9 @@ Test
 Permission
 Test
 
-二.准备工作
+二.引用
 将JitPack存储库添加到您的构建文件中将其添加到存储库末尾的root build.gradle中：
-123456allprojects &#123;      repositories &#123;      ...      maven &#123; url &#39;https:&#x2F;&#x2F;jitpack.io......
+123456allprojects &#123;      repositories &#123;      ...      maven &#123; url &#39;https:&#x2F;&#x2F;jitpack.io&#......
                 </div>
             </a>
             
@@ -436,18 +436,15 @@ Test
                 </h3>
                 <div class="post-content-preview">
                     一.源码传送门
-
-初衷是整理一个可以快速搭建该效果界面的一个框架，利于后期开发。
-
 工具类XTab
 测试代码androidxfragment+tab+viewpager
 项目中使用非androidx版本XMusic
+效果图
 
-
-
-二.效果图
-三.代码
-非androidx版本1234567891011121314151617181920212223242526272829303132333435363......
+初衷是整理一个可以快速搭建该效果界面的一个框架，利于后期开发。
+二.引用
+将JitPack存储库添加到您的构建文件中将其添加到存储库末尾的root build.gradle中：
+123456allprojects &#123;     ......
                 </div>
             </a>
             
@@ -567,10 +564,9 @@ MActivity.class抽象MActivity代码
                     一.源码传送门：
 Spanned此文是在此基础上做的讲解,用于加深印象
 
-二.使用
-初始化把textview控件传过去即可append传入要显示的字符
-
-1234TextView mTextview &#x3D; findViewById(R.id.text);SpanUtils.with(mTextview)        .append(getString(R.string.text))......
+二.引用
+将JitPack存储库添加到您的构建文件中将其添加到存储库末尾的root build.gradle中：
+123456allprojects &#123;      repositories &#123;      ...      maven &#123; url &#39;https:&#x2F;&#x2F......
                 </div>
             </a>
             
@@ -604,11 +600,13 @@ Spanned此文是在此基础上做的讲解,用于加深印象
                     
                 </h3>
                 <div class="post-content-preview">
-                    一.源码传送门：ServiceMusicService.java此文是在此基础上做的讲解,用于加深印象
-二.使用方法
-启动服务提供三种传参启动方法
+                    一.源码传送门：
+Service
+MusicService.java此文是在此基础上做的讲解,用于加深印象
 
-123XService.startService(TestService.class);XService.startService(new Intent(this,TestService.class));XService.startServic......
+二.引用
+将JitPack存储库添加到您的构建文件中将其添加到存储库末尾的root build.gradle中：
+123456allprojects &#123;      repositories &#123;      ...      maven &#123; url &#39......
                 </div>
             </a>
             
@@ -618,9 +616,9 @@ Spanned此文是在此基础上做的讲解,用于加深印象
                 </p>
                 <div class="tags">
                     
-                      <a href="/tags/#Service" title="Service">Service</a>
-                    
                       <a href="/tags/#xlib" title="xlib">xlib</a>
+                    
+                      <a href="/tags/#Service" title="Service">Service</a>
                     
                 </div>
             
@@ -725,8 +723,6 @@ Dialog此文是在此基础上做的讲解,用于加深印象
                     2020-05-28
                 </p>
                 <div class="tags">
-                    
-                      <a href="/tags/#xlib" title="xlib">xlib</a>
                     
                       <a href="/tags/#WindowManager" title="WindowManager">WindowManager</a>
                     
@@ -1342,7 +1338,7 @@ AlarmOpreation.java核心逻辑处理类，负责计算周期时间，然后将�
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;freedom&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34;]'></script>
         
 
         <!-- background effects end -->
@@ -1352,21 +1348,6 @@ AlarmOpreation.java核心逻辑处理类，负责计算周期时间，然后将�
     
         <script src="/js/ribbonDynamic.js"></script>
     
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
