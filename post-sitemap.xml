@@ -8,8 +8,56 @@
     </url>
 
     <url>
+        <loc>https://freedomer.com.cn/2021/03/05/%E6%A0%87%E7%AD%BE/</loc>
+        <lastmod>2021-03-16T08:52:45.340Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/2021/01/26/MVP%E6%A1%86%E6%9E%B6%E7%A4%BA%E4%BE%8B%E8%AE%B2%E8%A7%A3/</loc>
+        <lastmod>2021-03-16T08:38:24.188Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/2021/02/27/%E4%BA%8C%E7%BA%A7%E9%80%89%E6%8B%A9%E6%A1%86%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2021-03-16T08:38:15.357Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://freedomer.com.cn/2021/03/15/XScreen%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2021-03-16T02:21:10.690Z</lastmod>
+        <lastmod>2021-03-16T08:37:19.211Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/2020/12/14/%E5%B8%B8%E7%94%A8%E5%BC%B9%E5%87%BA%E5%AF%B9%E8%AF%9D%E6%A1%86%E6%95%B4%E7%90%86/</loc>
+        <lastmod>2021-03-16T03:47:27.689Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/2020/05/25/Intent%E5%9F%BA%E7%A1%80/</loc>
+        <lastmod>2021-03-16T03:44:27.558Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/2021/03/10/XTab%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2021-03-16T03:43:59.621Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,14 +82,6 @@
     <url>
         <loc>https://freedomer.com.cn/2021/03/14/XZip%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
         <lastmod>2021-03-14T14:44:07.614Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/2021/03/10/XTab%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2021-03-14T14:42:34.060Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -88,14 +128,6 @@
     </url>
 
     <url>
-        <loc>https://freedomer.com.cn/2020/05/25/Intent%E5%9F%BA%E7%A1%80/</loc>
-        <lastmod>2021-03-09T01:23:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://freedomer.com.cn/2020/05/18/Activity%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
         <lastmod>2021-03-08T03:34:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -130,38 +162,6 @@
     <url>
         <loc>https://freedomer.com.cn/2018/07/21/%E8%A7%A3%E8%AF%BB%E9%97%B9%E9%92%9F%E4%BB%A3%E7%A0%81/</loc>
         <lastmod>2021-03-06T10:46:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/2021/03/05/%E7%9B%AE%E5%BD%95/</loc>
-        <lastmod>2021-03-06T09:48:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/2021/02/27/%E4%BA%8C%E7%BA%A7%E9%80%89%E6%8B%A9%E6%A1%86%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2021-03-06T04:34:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/2020/12/14/%E5%B8%B8%E7%94%A8%E5%BC%B9%E5%87%BA%E5%AF%B9%E8%AF%9D%E6%A1%86%E6%95%B4%E7%90%86/</loc>
-        <lastmod>2021-03-06T04:33:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/2021/01/26/MVP%E6%A1%86%E6%9E%B6%E7%A4%BA%E4%BE%8B%E8%AE%B2%E8%A7%A3/</loc>
-        <lastmod>2021-03-06T02:13:48.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
