@@ -129,8 +129,8 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">241</span> and
-                                Reading Time <span class="post-count">1</span> Minutes
+                                Words <span class="post-count">450</span> and
+                                Reading Time <span class="post-count">2</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -191,6 +191,13 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -199,13 +206,6 @@
                         
                         <li>
                             <a href="/categories/">Categories</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -267,12 +267,32 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="一-代码位置"><a href="#一-代码位置" class="headerlink" title="一.代码位置"></a>一.代码位置</h3><h3 id="二-引用"><a href="#二-引用" class="headerlink" title="二.引用"></a>二.引用</h3><h3 id="三-效果图"><a href="#三-效果图" class="headerlink" title="三.效果图"></a>三.效果图</h3><h3 id="四-需求和代码"><a href="#四-需求和代码" class="headerlink" title="四.需求和代码"></a>四.需求和代码</h3><p>工作中的需求，解决原生Toast在高版本平台发现连续点击之后不会弹出问题。<br>解决方法最终是使用WindowManager来替换原生Toast</p>
+                <h3 id="一-代码位置"><a href="#一-代码位置" class="headerlink" title="一.代码位置"></a>一.代码位置</h3><ul>
+<li><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/toast/XToast.java" target="_blank" rel="noopener">xlib-Toast</a></li>
+<li><a href="https://github.com/itemuse/XTester/tree/master/windowmanager" target="_blank" rel="noopener">XTester-windowmanager</a></li>
+</ul>
+<h3 id="二-引用"><a href="#二-引用" class="headerlink" title="二.引用"></a>二.引用</h3><ol>
+<li><p>将JitPack存储库添加到您的构建文件中<br>将其添加到存储库末尾的root build.gradle中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">      repositories &#123;</span><br><span class="line">      ...</span><br><span class="line">      maven &#123; url &#39;https:&#x2F;&#x2F;jitpack.io&#39; &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加依赖项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">      ...</span><br><span class="line">      implementation &#39;com.github.itemuse:XLib:Tag&#39;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化 Application中init</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import cn.xy.library.XApp;</span><br><span class="line">      ...</span><br><span class="line">@Override</span><br><span class="line">public void onCreate() &#123;</span><br><span class="line">      super.onCreate();</span><br><span class="line">      XApp.init(this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AndroidManifest.xml中添加弹出界面的activity</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.SYSTEM_ALERT_WINDOW&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="三-效果图"><a href="#三-效果图" class="headerlink" title="三.效果图"></a>三.效果图</h3><p><img src="img.gif" alt="im"></p>
+<h3 id="四-需求和代码"><a href="#四-需求和代码" class="headerlink" title="四.需求和代码"></a>四.需求和代码</h3><p>工作中的需求，解决原生Toast在高版本平台发现连续点击之后不会弹出问题。<br>解决方法最终是使用WindowManager来替换原生Toast</p>
 <ul>
 <li>示例使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">XToast.getInstance()</span><br><span class="line">        .Text(&quot;AAAAAA&quot;)</span><br><span class="line">        .TextColor(R.color.colorPrimary) &#x2F;&#x2F;字体颜色</span><br><span class="line">        .TextSize(50) &#x2F;&#x2F;字体大小</span><br><span class="line">        .BackGroundColor(R.color.colorAccent) &#x2F;&#x2F;背景颜色</span><br><span class="line">        .LayoutParamsX(w) &#x2F;&#x2F;偏离XToast左边距离 受Gravity影响</span><br><span class="line">        .LayoutParamsY(h) &#x2F;&#x2F;偏离XToastY坐标距离 受Gravity影响</span><br><span class="line">        .Gravity(Gravity.BOTTOM) &#x2F;&#x2F;Toast显示位置的重心设置</span><br><span class="line">        .RoundedCorners(3) &#x2F;&#x2F;背景圆角大小</span><br><span class="line">        .ShowTime(XToast.LENGTH_SHORTSHORT) &#x2F;&#x2F;显示时长</span><br><span class="line">        .show();</span><br></pre></td></tr></table></figure>
 单例化<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static XToast getInstance() &#123;</span><br><span class="line">	if (mToastView &#x3D;&#x3D; null) &#123;</span><br><span class="line">		mToastView &#x3D; new XToast(XApp.getApp());</span><br><span class="line">		return mToastView;</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		return mToastView;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-默认UI线程创建<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private Handler mHandler &#x3D; new Handler(Looper.getMainLooper()) &#123;</span><br><span class="line">	public void handleMessage(android.os.Message msg) &#123;</span><br><span class="line">		if (msg.what &#x3D;&#x3D; HIDE) &#123;</span><br><span class="line">			hide();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-其他的就是一些<img src="https://freedomer.com.cn/2020/05/28/WindowManager%E5%9F%BA%E7%A1%80/" alt="WindowManager">创建流程</li>
+通过handler通讯，将实例创建在UI线程<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private Handler mHandler &#x3D; new Handler(Looper.getMainLooper()) &#123;</span><br><span class="line">	public void handleMessage(android.os.Message msg) &#123;</span><br><span class="line">		if (msg.what &#x3D;&#x3D; HIDE) &#123;</span><br><span class="line">			hide();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+给view设置圆角<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 设置视图裁剪的圆角半径</span><br><span class="line"> * @param radius 半径</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void setRoundedCorners(View view, final int radius) &#123;</span><br><span class="line">    if (view &#x3D;&#x3D; null) return;</span><br><span class="line">    if (radius &lt;&#x3D; 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if (android.os.Build.VERSION.SDK_INT &gt;&#x3D; android.os.Build.VERSION_CODES.LOLLIPOP) &#123;</span><br><span class="line">        view.setOutlineProvider(new ViewOutlineProvider() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void getOutline(View view, Outline outline) &#123;</span><br><span class="line">                outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(), radius);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        view.setClipToOutline(true);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+其他的就是一些<a href="https://freedomer.com.cn/2020/05/28/WindowManager%E5%9F%BA%E7%A1%80/">WindowManager</a>创建流程</li>
 </ul>
 
                 
@@ -621,7 +641,7 @@
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;freedom&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34;]'></script>
         
 
         <!-- background effects end -->
@@ -631,21 +651,6 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

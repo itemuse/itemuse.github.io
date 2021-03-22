@@ -187,6 +187,13 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -195,13 +202,6 @@
                         
                         <li>
                             <a href="/categories/">Categories</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -263,7 +263,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="一-源码传送门："><a href="#一-源码传送门：" class="headerlink" title="一.源码传送门："></a>一.源码传送门：</h3><p><a href="https://github.com/itemuse/XTester/tree/master/windowmanager" target="_blank" rel="noopener">WindowManager</a><br><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/screen/XScreen.java" target="_blank" rel="noopener">Screen</a><br>此文是在此基础上做的讲解,用于加深印象</p>
+                <h3 id="一-代码位置"><a href="#一-代码位置" class="headerlink" title="一.代码位置"></a>一.代码位置</h3><p><a href="https://github.com/itemuse/XTester/tree/master/windowmanager" target="_blank" rel="noopener">XTester-WindowManager</a><br><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/screen/XScreen.java" target="_blank" rel="noopener">xlib-Screen</a><br>此文是在此基础上做的讲解,用于加深印象</p>
 <h3 id="二-WindowManager介绍"><a href="#二-WindowManager介绍" class="headerlink" title="二.WindowManager介绍"></a>二.WindowManager介绍</h3><p>Android为我们提供的用于与窗口管理器进行交互的一个API！我们都知道App的界面都是 由一个个的Acitivty组成，而Activity又由View组成，当我们想显示一个界面的时候， 第一时间想起的是:Activity，对吧？又或者是Dialog和Toast。</p>
 <p>但是有些情况下，前面这三者可能满足不了我们的需求，比如我们仅仅是一个简单的显示 用Activity显得有点多余了，而Dialog又需要Context对象，Toast又不可以点击… 对于以上的情况我们可以利用WindowManager这个东东添加View到屏幕上， 或者从屏幕上移除View！他就是管理Android窗口机制的一个接口，显示View的最底层！</p>
 <h3 id="三-如何获得WindowManager实例"><a href="#三-如何获得WindowManager实例" class="headerlink" title="三.如何获得WindowManager实例"></a>三.如何获得WindowManager实例</h3><ol>
@@ -420,7 +420,7 @@
           <strong class="toc-title">Contents</strong>
           
             
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-源码传送门："><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.源码传送门：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-WindowManager介绍"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.WindowManager介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-如何获得WindowManager实例"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.如何获得WindowManager实例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-WindowManager使用实例："><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.WindowManager使用实例：</span></a></li></ol>
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-代码位置"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.代码位置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-WindowManager介绍"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.WindowManager介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-如何获得WindowManager实例"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.如何获得WindowManager实例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#四-WindowManager使用实例："><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四.WindowManager使用实例：</span></a></li></ol>
             
           
           </div>
@@ -646,7 +646,7 @@
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;freedom&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34;]'></script>
         
 
         <!-- background effects end -->
@@ -656,21 +656,6 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
