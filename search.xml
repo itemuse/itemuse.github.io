@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>XToast使用笔记</title>
+      <link href="2021/03/21/XToast%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+      <url>2021/03/21/XToast%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一-代码位置"><a href="#一-代码位置" class="headerlink" title="一.代码位置"></a>一.代码位置</h3><h3 id="二-引用"><a href="#二-引用" class="headerlink" title="二.引用"></a>二.引用</h3><h3 id="三-效果图"><a href="#三-效果图" class="headerlink" title="三.效果图"></a>三.效果图</h3><h3 id="四-需求和代码"><a href="#四-需求和代码" class="headerlink" title="四.需求和代码"></a>四.需求和代码</h3><p>工作中的需求，解决原生Toast在高版本平台发现连续点击之后不会弹出问题。<br>解决方法最终是使用WindowManager来替换原生Toast</p><ul><li>示例使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">XToast.getInstance()</span><br><span class="line">        .Text(&quot;AAAAAA&quot;)</span><br><span class="line">        .TextColor(R.color.colorPrimary) &#x2F;&#x2F;字体颜色</span><br><span class="line">        .TextSize(50) &#x2F;&#x2F;字体大小</span><br><span class="line">        .BackGroundColor(R.color.colorAccent) &#x2F;&#x2F;背景颜色</span><br><span class="line">        .LayoutParamsX(w) &#x2F;&#x2F;偏离XToast左边距离 受Gravity影响</span><br><span class="line">        .LayoutParamsY(h) &#x2F;&#x2F;偏离XToastY坐标距离 受Gravity影响</span><br><span class="line">        .Gravity(Gravity.BOTTOM) &#x2F;&#x2F;Toast显示位置的重心设置</span><br><span class="line">        .RoundedCorners(3) &#x2F;&#x2F;背景圆角大小</span><br><span class="line">        .ShowTime(XToast.LENGTH_SHORTSHORT) &#x2F;&#x2F;显示时长</span><br><span class="line">        .show();</span><br></pre></td></tr></table></figure>单例化<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static XToast getInstance() &#123;</span><br><span class="line">if (mToastView &#x3D;&#x3D; null) &#123;</span><br><span class="line">mToastView &#x3D; new XToast(XApp.getApp());</span><br><span class="line">return mToastView;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">return mToastView;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>默认UI线程创建<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private Handler mHandler &#x3D; new Handler(Looper.getMainLooper()) &#123;</span><br><span class="line">public void handleMessage(android.os.Message msg) &#123;</span><br><span class="line">if (msg.what &#x3D;&#x3D; HIDE) &#123;</span><br><span class="line">hide();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>其他的就是一些<img src="https://freedomer.com.cn/2020/05/28/WindowManager%E5%9F%BA%E7%A1%80/" alt="WindowManager">创建流程</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> xlib </tag>
+            
+            <tag> WindowManager </tag>
+            
+            <tag> Toast </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AndroidPdfViewer使用笔记</title>
       <link href="2021/03/19/%E4%BD%BF%E7%94%A8AndroidPdfViewer%E7%AC%94%E8%AE%B0/"/>
       <url>2021/03/19/%E4%BD%BF%E7%94%A8AndroidPdfViewer%E7%AC%94%E8%AE%B0/</url>
@@ -278,9 +307,9 @@
       
         <tags>
             
-            <tag> xlib </tag>
-            
             <tag> Service </tag>
+            
+            <tag> xlib </tag>
             
         </tags>
       

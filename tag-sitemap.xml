@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://freedomer.com.cn/tags/Toast/</loc>
+        <lastmod>2021-03-22T02:26:29.140Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/tags/WindowManager/</loc>
+        <lastmod>2021-03-22T02:26:29.140Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://freedomer.com.cn/tags/xlib/</loc>
+        <lastmod>2021-03-22T02:26:29.140Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://freedomer.com.cn/tags/ZXing/</loc>
         <lastmod>2021-03-18T16:32:25.735Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,13 +53,6 @@
 
     <url>
         <loc>https://freedomer.com.cn/tags/Screen/</loc>
-        <lastmod>2021-03-16T08:37:19.211Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/tags/xlib/</loc>
         <lastmod>2021-03-16T08:37:19.211Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -103,13 +117,6 @@
     <url>
         <loc>https://freedomer.com.cn/tags/Spanned/</loc>
         <lastmod>2021-03-14T14:38:54.172Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/tags/WindowManager/</loc>
-        <lastmod>2021-03-14T14:28:11.548Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
