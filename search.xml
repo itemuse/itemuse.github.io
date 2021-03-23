@@ -157,11 +157,11 @@
             
             <tag> xlib </tag>
             
+            <tag> Fragment </tag>
+            
             <tag> Tab </tag>
             
             <tag> ViewPager </tag>
-            
-            <tag> Fragment </tag>
             
         </tags>
       
@@ -282,9 +282,9 @@
       
         <tags>
             
-            <tag> xlib </tag>
-            
             <tag> Service </tag>
+            
+            <tag> xlib </tag>
             
         </tags>
       
