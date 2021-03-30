@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://freedomer.com.cn/2021/03/25/PackageManager%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2021-03-29</lastmod>
+    <loc>https://freedomer.com.cn/2020/05/28/WindowManager%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://freedomer.com.cn/2021/01/06/XService%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://freedomer.com.cn/2021/01/20/XSpanned%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/10/XTab%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/12/XPermission%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-30</lastmod>
   </url>
   <url>
     <loc>https://freedomer.com.cn/2021/03/14/XZip%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/15/XScreen%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-30</lastmod>
+  </url>
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/25/PackageManager%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2021-03-29</lastmod>
   </url>
   <url>
@@ -14,10 +38,6 @@
   </url>
   <url>
     <loc>https://freedomer.com.cn/2021/03/21/XToast%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://freedomer.com.cn/2020/05/28/WindowManager%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2021-03-22</lastmod>
   </url>
   <url>
@@ -34,26 +54,6 @@
   </url>
   <url>
     <loc>https://freedomer.com.cn/2018/07/21/%E8%A7%A3%E8%AF%BB%E9%97%B9%E9%92%9F%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2021-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://freedomer.com.cn/2021/01/06/XService%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://freedomer.com.cn/2021/01/20/XSpanned%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://freedomer.com.cn/2021/03/10/XTab%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://freedomer.com.cn/2021/03/12/XPermission%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://freedomer.com.cn/2021/03/15/XScreen%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-03-22</lastmod>
   </url>
   <url>

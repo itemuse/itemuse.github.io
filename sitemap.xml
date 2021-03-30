@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://freedomer.com.cn/2021/03/25/PackageManager%25E5%259F%25BA%25E7%25A1%2580/</loc>
+    <loc>https://freedomer.com.cn/2020/05/28/WindowManager%25E5%259F%25BA%25E7%25A1%2580/</loc>
     
-    <lastmod>2021-03-29T10:06:16.340Z</lastmod>
+    <lastmod>2021-03-30T02:03:29.199Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://freedomer.com.cn/2021/01/06/XService%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
+    
+    <lastmod>2021-03-30T02:01:41.529Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://freedomer.com.cn/2021/01/20/XSpanned%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
+    
+    <lastmod>2021-03-30T02:00:44.360Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/10/XTab%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
+    
+    <lastmod>2021-03-30T01:58:42.992Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/12/XPermission%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
+    
+    <lastmod>2021-03-30T01:52:48.006Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://freedomer.com.cn/2021/03/14/XZip%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
     
-    <lastmod>2021-03-29T01:43:47.083Z</lastmod>
+    <lastmod>2021-03-30T01:52:15.327Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/15/XScreen%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
+    
+    <lastmod>2021-03-30T01:50:19.840Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://freedomer.com.cn/2021/03/25/PackageManager%25E5%259F%25BA%25E7%25A1%2580/</loc>
+    
+    <lastmod>2021-03-29T10:16:12.540Z</lastmod>
     
   </url>
   
@@ -26,13 +68,6 @@
     <loc>https://freedomer.com.cn/2021/03/21/XToast%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
     
     <lastmod>2021-03-22T02:42:08.645Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://freedomer.com.cn/2020/05/28/WindowManager%25E5%259F%25BA%25E7%25A1%2580/</loc>
-    
-    <lastmod>2021-03-22T02:39:31.751Z</lastmod>
     
   </url>
   
@@ -61,41 +96,6 @@
     <loc>https://freedomer.com.cn/2018/07/21/%25E8%25A7%25A3%25E8%25AF%25BB%25E9%2597%25B9%25E9%2592%259F%25E4%25BB%25A3%25E7%25A0%2581/</loc>
     
     <lastmod>2021-03-22T02:38:33.301Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://freedomer.com.cn/2021/01/06/XService%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
-    
-    <lastmod>2021-03-22T02:38:28.783Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://freedomer.com.cn/2021/01/20/XSpanned%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
-    
-    <lastmod>2021-03-22T02:38:25.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://freedomer.com.cn/2021/03/10/XTab%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
-    
-    <lastmod>2021-03-22T02:38:10.800Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://freedomer.com.cn/2021/03/12/XPermission%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
-    
-    <lastmod>2021-03-22T02:38:06.316Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://freedomer.com.cn/2021/03/15/XScreen%25E4%25BD%25BF%25E7%2594%25A8%25E7%25AC%2594%25E8%25AE%25B0/</loc>
-    
-    <lastmod>2021-03-22T02:37:54.260Z</lastmod>
     
   </url>
   
