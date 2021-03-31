@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="my code warehouse">
+    <meta name="keyword"  content="hero world">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          XNewWork使用笔记 - Freedomer
+        
+    </title>
+
+    <link rel="canonical" href="https://freedomer.com.cn/2021/03/31/XNewWork使用笔记/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS --> 
+    
+        
+<link rel="stylesheet" href="/css/dusign-light.css">
+
+        
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+
+        
+<link rel="stylesheet" href="/css/font-awesome.css">
+
+        
+<link rel="stylesheet" href="/css/toc.css">
+
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- photography -->
+    
+<link rel="stylesheet" href="/css/photography.css">
+
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../../img/default.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#xlib" title="xlib">xlib</a>
+                            
+                              <a class="tag" href="/tags/#NetWork" title="NetWork">NetWork</a>
+                            
+                              <a class="tag" href="/tags/#TelephonyManager" title="TelephonyManager">TelephonyManager</a>
+                            
+                              <a class="tag" href="/tags/#WifiManager" title="WifiManager">WifiManager</a>
+                            
+                        </div>
+                        <h1>XNewWork使用笔记</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by  on
+                            2021-03-31
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">1.1k</span> and
+                                Reading Time <span class="post-count">6</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="一-代码"><a href="#一-代码" class="headerlink" title="一.代码"></a>一.代码</h3><p><a href="https://github.com/itemuse/XTester/tree/master/network" target="_blank" rel="noopener">XTester-network</a><br><a href="https://github.com/itemuse/XLib/blob/master/library/src/main/java/cn/xy/library/util/network/XNetwork.java" target="_blank" rel="noopener">xlib-Network</a></p>
+<h3 id="二-demo"><a href="#二-demo" class="headerlink" title="二.demo"></a>二.demo</h3><p><img src="img.gif" alt="img"></p>
+<h3 id="三-方法"><a href="#三-方法" class="headerlink" title="三.方法"></a>三.方法</h3><ul>
+<li><h4 id="打开网络设置界面"><a href="#打开网络设置界面" class="headerlink" title="打开网络设置界面"></a>打开网络设置界面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Open the settings of wireless.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void openWirelessSettings() &#123;</span><br><span class="line">    getApp().startActivity(</span><br><span class="line">            new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS)</span><br><span class="line">                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断网络是否连接"><a href="#判断网络是否连接" class="headerlink" title="判断网络是否连接"></a>判断网络是否连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">public static boolean isConnected() &#123;</span><br><span class="line">    NetworkInfo info &#x3D; getActiveNetworkInfo();</span><br><span class="line">    return info !&#x3D; null &amp;&amp; info.isConnected();</span><br><span class="line">&#125;</span><br><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">private static NetworkInfo getActiveNetworkInfo() &#123;</span><br><span class="line">    ConnectivityManager cm &#x3D;</span><br><span class="line">            (ConnectivityManager) getApp().getSystemService(Context.CONNECTIVITY_SERVICE);</span><br><span class="line">    if (cm &#x3D;&#x3D; null) return null;</span><br><span class="line">    return cm.getActiveNetworkInfo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断网络是否可用"><a href="#判断网络是否可用" class="headerlink" title="判断网络是否可用"></a>判断网络是否可用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(INTERNET)</span><br><span class="line">public static boolean isAvailableByDns(final String domain) &#123;</span><br><span class="line">    final String realDomain &#x3D; TextUtils.isEmpty(domain) ? &quot;www.baidu.com&quot; : domain;</span><br><span class="line">    InetAddress inetAddress;</span><br><span class="line">    try &#123;</span><br><span class="line">        inetAddress &#x3D; InetAddress.getByName(realDomain);</span><br><span class="line">        return inetAddress !&#x3D; null;</span><br><span class="line">    &#125; catch (UnknownHostException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断移动数据是否打开"><a href="#判断移动数据是否打开" class="headerlink" title="判断移动数据是否打开"></a>判断移动数据是否打开</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(MODIFY_PHONE_STATE)</span><br><span class="line">public static boolean getMobileDataEnabled() &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        TelephonyManager tm &#x3D;</span><br><span class="line">                (TelephonyManager) getApp().getSystemService(Context.TELEPHONY_SERVICE);</span><br><span class="line">        if (tm &#x3D;&#x3D; null) return false;</span><br><span class="line">        if (Build.VERSION.SDK_INT &gt;&#x3D; Build.VERSION_CODES.O)  &#123;</span><br><span class="line">                return tm.isDataEnabled();</span><br><span class="line">        &#125;</span><br><span class="line">        @SuppressLint(&quot;PrivateApi&quot;)</span><br><span class="line">        Method getMobileDataEnabledMethod &#x3D;</span><br><span class="line">                tm.getClass().getDeclaredMethod(&quot;getDataEnabled&quot;);</span><br><span class="line">        if (null !&#x3D; getMobileDataEnabledMethod) &#123;</span><br><span class="line">            return (boolean) getMobileDataEnabledMethod.invoke(tm);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断网络是否是移动数据"><a href="#判断网络是否是移动数据" class="headerlink" title="判断网络是否是移动数据"></a>判断网络是否是移动数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">public static boolean isMobileData() &#123;</span><br><span class="line">    NetworkInfo info &#x3D; getActiveNetworkInfo();</span><br><span class="line">    return null !&#x3D; info</span><br><span class="line">            &amp;&amp; info.isAvailable()</span><br><span class="line">            &amp;&amp; info.getType() &#x3D;&#x3D; ConnectivityManager.TYPE_MOBILE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断网络是否是-4G、5G"><a href="#判断网络是否是-4G、5G" class="headerlink" title="判断网络是否是 4G、5G"></a>判断网络是否是 4G、5G</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Return whether using 4G.</span><br><span class="line"> * &lt;p&gt;Must hold &#123;@code &lt;uses-permission android:name&#x3D;&quot;android.permission.ACCESS_NETWORK_STATE&quot; &#x2F;&gt;&#125;&lt;&#x2F;p&gt;</span><br><span class="line"> *</span><br><span class="line"> * @return &#123;@code true&#125;: yes&lt;br&gt;&#123;@code false&#125;: no</span><br><span class="line"> *&#x2F;</span><br><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">public static boolean is4G() &#123;</span><br><span class="line">    NetworkInfo info &#x3D; getActiveNetworkInfo();</span><br><span class="line">    return info !&#x3D; null</span><br><span class="line">            &amp;&amp; info.isAvailable()</span><br><span class="line">            &amp;&amp; info.getSubtype() &#x3D;&#x3D; TelephonyManager.NETWORK_TYPE_LTE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Return whether using 4G.</span><br><span class="line"> * &lt;p&gt;Must hold &#123;@code &lt;uses-permission android:name&#x3D;&quot;android.permission.ACCESS_NETWORK_STATE&quot; &#x2F;&gt;&#125;&lt;&#x2F;p&gt;</span><br><span class="line"> *</span><br><span class="line"> * @return &#123;@code true&#125;: yes&lt;br&gt;&#123;@code false&#125;: no</span><br><span class="line"> *&#x2F;</span><br><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">public static boolean is5G() &#123;</span><br><span class="line">    NetworkInfo info &#x3D; getActiveNetworkInfo();</span><br><span class="line">    return info !&#x3D; null</span><br><span class="line">            &amp;&amp; info.isAvailable()</span><br><span class="line">            &amp;&amp; info.getSubtype() &#x3D;&#x3D; TelephonyManager.NETWORK_TYPE_NR;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">private static NetworkInfo getActiveNetworkInfo() &#123;</span><br><span class="line">    ConnectivityManager cm &#x3D;</span><br><span class="line">            (ConnectivityManager) getApp().getSystemService(Context.CONNECTIVITY_SERVICE);</span><br><span class="line">    if (cm &#x3D;&#x3D; null) return null;</span><br><span class="line">    return cm.getActiveNetworkInfo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断-wifi-是否打开"><a href="#判断-wifi-是否打开" class="headerlink" title="判断 wifi 是否打开"></a>判断 wifi 是否打开</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(ACCESS_WIFI_STATE)</span><br><span class="line">public static boolean getWifiEnabled() &#123;</span><br><span class="line">    @SuppressLint(&quot;WifiManagerLeak&quot;)</span><br><span class="line">    WifiManager manager &#x3D; (WifiManager) getApp().getSystemService(WIFI_SERVICE);</span><br><span class="line">    if (manager &#x3D;&#x3D; null) return false;</span><br><span class="line">    return manager.isWifiEnabled();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="打开或关闭-wifi"><a href="#打开或关闭-wifi" class="headerlink" title="打开或关闭 wifi"></a>打开或关闭 wifi</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(CHANGE_WIFI_STATE)</span><br><span class="line">public static void setWifiEnabled(final boolean enabled) &#123;</span><br><span class="line">    @SuppressLint(&quot;WifiManagerLeak&quot;)</span><br><span class="line">    WifiManager manager &#x3D; (WifiManager) getApp().getSystemService(WIFI_SERVICE);</span><br><span class="line">    if (manager &#x3D;&#x3D; null) return;</span><br><span class="line">    if (enabled &#x3D;&#x3D; manager.isWifiEnabled()) return;</span><br><span class="line">    manager.setWifiEnabled(enabled);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="判断-wifi-是否连接状态"><a href="#判断-wifi-是否连接状态" class="headerlink" title="判断 wifi 是否连接状态"></a>判断 wifi 是否连接状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">public static boolean isWifiConnected() &#123;</span><br><span class="line">    ConnectivityManager cm &#x3D;</span><br><span class="line">            (ConnectivityManager) getApp().getSystemService(Context.CONNECTIVITY_SERVICE);</span><br><span class="line">    if (cm &#x3D;&#x3D; null) return false;</span><br><span class="line">    NetworkInfo ni &#x3D; cm.getActiveNetworkInfo();</span><br><span class="line">    return ni !&#x3D; null &amp;&amp; ni.getType() &#x3D;&#x3D; ConnectivityManager.TYPE_WIFI;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="获取当前网络类型"><a href="#获取当前网络类型" class="headerlink" title="获取当前网络类型"></a>获取当前网络类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(ACCESS_NETWORK_STATE)</span><br><span class="line">public static NetworkType getNetworkType() &#123;</span><br><span class="line">    if (isEthernet()) &#123;</span><br><span class="line">        return NetworkType.NETWORK_ETHERNET;</span><br><span class="line">    &#125;</span><br><span class="line">    NetworkInfo info &#x3D; getActiveNetworkInfo();</span><br><span class="line">    if (info !&#x3D; null &amp;&amp; info.isAvailable()) &#123;</span><br><span class="line">        if (info.getType() &#x3D;&#x3D; ConnectivityManager.TYPE_WIFI) &#123;</span><br><span class="line">            return NetworkType.NETWORK_WIFI;</span><br><span class="line">        &#125; else if (info.getType() &#x3D;&#x3D; ConnectivityManager.TYPE_MOBILE) &#123;</span><br><span class="line">            switch (info.getSubtype()) &#123;</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_GSM:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_GPRS:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_CDMA:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_EDGE:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_1xRTT:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_IDEN:</span><br><span class="line">                    return NetworkType.NETWORK_2G;</span><br><span class="line"></span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_TD_SCDMA:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_EVDO_A:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_UMTS:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_EVDO_0:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_HSDPA:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_HSUPA:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_HSPA:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_EVDO_B:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_EHRPD:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_HSPAP:</span><br><span class="line">                    return NetworkType.NETWORK_3G;</span><br><span class="line"></span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_IWLAN:</span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_LTE:</span><br><span class="line">                    return NetworkType.NETWORK_4G;</span><br><span class="line"></span><br><span class="line">                case TelephonyManager.NETWORK_TYPE_NR:</span><br><span class="line">                    return NetworkType.NETWORK_5G;</span><br><span class="line">                default:</span><br><span class="line">                    String subtypeName &#x3D; info.getSubtypeName();</span><br><span class="line">                    if (subtypeName.equalsIgnoreCase(&quot;TD-SCDMA&quot;)</span><br><span class="line">                            || subtypeName.equalsIgnoreCase(&quot;WCDMA&quot;)</span><br><span class="line">                            || subtypeName.equalsIgnoreCase(&quot;CDMA2000&quot;)) &#123;</span><br><span class="line">                        return NetworkType.NETWORK_3G;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return NetworkType.NETWORK_UNKNOWN;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return NetworkType.NETWORK_UNKNOWN;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return NetworkType.NETWORK_NO;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="获取-IP-地址"><a href="#获取-IP-地址" class="headerlink" title="获取 IP 地址"></a>获取 IP 地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * Return the ip address.</span><br><span class="line"> * &lt;p&gt;Must hold &#123;@code &lt;uses-permission android:name&#x3D;&quot;android.permission.INTERNET&quot; &#x2F;&gt;&#125;&lt;&#x2F;p&gt;</span><br><span class="line"> *</span><br><span class="line"> * @param useIPv4 True to use ipv4, false otherwise.</span><br><span class="line"> * @return the ip address</span><br><span class="line"> *&#x2F;</span><br><span class="line">@RequiresPermission(INTERNET)</span><br><span class="line">public static String getIPAddress(final boolean useIPv4) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        Enumeration&lt;NetworkInterface&gt; nis &#x3D; NetworkInterface.getNetworkInterfaces();</span><br><span class="line">        LinkedList&lt;InetAddress&gt; adds &#x3D; new LinkedList&lt;&gt;();</span><br><span class="line">        while (nis.hasMoreElements()) &#123;</span><br><span class="line">            NetworkInterface ni &#x3D; nis.nextElement();</span><br><span class="line">            &#x2F;&#x2F; To prevent phone of xiaomi return &quot;10.0.2.15&quot;</span><br><span class="line">            if (!ni.isUp() || ni.isLoopback()) continue;</span><br><span class="line">            Enumeration&lt;InetAddress&gt; addresses &#x3D; ni.getInetAddresses();</span><br><span class="line">            while (addresses.hasMoreElements()) &#123;</span><br><span class="line">                adds.addFirst(addresses.nextElement());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (InetAddress add : adds) &#123;</span><br><span class="line">            if (!add.isLoopbackAddress()) &#123;</span><br><span class="line">                String hostAddress &#x3D; add.getHostAddress();</span><br><span class="line">                boolean isIPv4 &#x3D; hostAddress.indexOf(&#39;:&#39;) &lt; 0;</span><br><span class="line">                if (useIPv4) &#123;</span><br><span class="line">                    if (isIPv4) return hostAddress;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    if (!isIPv4) &#123;</span><br><span class="line">                        int index &#x3D; hostAddress.indexOf(&#39;%&#39;);</span><br><span class="line">                        return index &lt; 0</span><br><span class="line">                                ? hostAddress.toUpperCase()</span><br><span class="line">                                : hostAddress.substring(0, index).toUpperCase();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (SocketException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    return &quot;&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="获取域名-IP-地址"><a href="#获取域名-IP-地址" class="headerlink" title="获取域名 IP 地址"></a>获取域名 IP 地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(INTERNET)</span><br><span class="line">public static String getDomainAddress(final String domain) &#123;</span><br><span class="line">    InetAddress inetAddress;</span><br><span class="line">    try &#123;</span><br><span class="line">        inetAddress &#x3D; InetAddress.getByName(domain);</span><br><span class="line">        return inetAddress.getHostAddress();</span><br><span class="line">    &#125; catch (UnknownHostException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        return &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="根据-WiFi-获取网络-IP-地址"><a href="#根据-WiFi-获取网络-IP-地址" class="headerlink" title="根据 WiFi 获取网络 IP 地址"></a>根据 WiFi 获取网络 IP 地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@RequiresPermission(ACCESS_WIFI_STATE)</span><br><span class="line">public static String getIpAddressByWifi() &#123;</span><br><span class="line">    @SuppressLint(&quot;WifiManagerLeak&quot;)</span><br><span class="line">    WifiManager wm &#x3D; (WifiManager) getApp().getSystemService(Context.WIFI_SERVICE);</span><br><span class="line">    if (wm &#x3D;&#x3D; null) return &quot;&quot;;</span><br><span class="line">    return Formatter.formatIpAddress(wm.getDhcpInfo().ipAddress);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="网络状态改变监听器"><a href="#网络状态改变监听器" class="headerlink" title="网络状态改变监听器"></a>网络状态改变监听器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">XNetwork.registerNetworkStatusChangedListener(new XNetwork.OnNetworkStatusChangedListener() &#123;</span><br><span class="line">         @Override</span><br><span class="line">         public void onDisconnected() &#123;</span><br><span class="line">             </span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         @Override</span><br><span class="line">         public void onConnected(XNetwork.NetworkType networkType) &#123;</span><br><span class="line"></span><br><span class="line">         &#125;</span><br><span class="line">     &#125;);</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="wifi列表更新监听器"><a href="#wifi列表更新监听器" class="headerlink" title="wifi列表更新监听器"></a>wifi列表更新监听器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">XNetwork.addOnWifiChangedConsumer(new XApp.Consumer&lt;WifiScanResults&gt;() &#123;</span><br><span class="line">         @Override</span><br><span class="line">         public void accept(WifiScanResults wifiScanResults) &#123;</span><br><span class="line">             </span><br><span class="line">         &#125;</span><br><span class="line">     &#125;);</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="获取-WIFI-列表"><a href="#获取-WIFI-列表" class="headerlink" title="获取 WIFI 列表"></a>获取 WIFI 列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WifiScanResults wifiScanResults &#x3D; XNetwork.getWifiScanResult();</span><br><span class="line">List&lt;ScanResult&gt; scanResults &#x3D; wifiScanResults.getFilterResults();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2021/03/30/ViewPager2使用笔记/" data-toggle="tooltip" data-placement="top" title="ViewPager2使用笔记">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+
+
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/music-player/utill.js"></script>
+
+
+<script src="/js/music-player/jquery.min.js"></script>
+
+<!-- netease; qqkg -->
+<!--
+<script src="/js/music-player/player.js?library=config.music.library.js"></script>
+-->
+<script src="../../../../js/music-player/player.js?library=netease&music=https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html"></script>
+                
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一-代码"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一.代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二-demo"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二.demo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三-方法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三.方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#打开网络设置界面"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">打开网络设置界面</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断网络是否连接"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">判断网络是否连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断网络是否可用"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">判断网络是否可用</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断移动数据是否打开"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">判断移动数据是否打开</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断网络是否是移动数据"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">判断网络是否是移动数据</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断网络是否是-4G、5G"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">判断网络是否是 4G、5G</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断-wifi-是否打开"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">判断 wifi 是否打开</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#打开或关闭-wifi"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">打开或关闭 wifi</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#判断-wifi-是否连接状态"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">判断 wifi 是否连接状态</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#获取当前网络类型"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">获取当前网络类型</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#获取-IP-地址"><span class="toc-nav-number">3.11.</span> <span class="toc-nav-text">获取 IP 地址</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#获取域名-IP-地址"><span class="toc-nav-number">3.12.</span> <span class="toc-nav-text">获取域名 IP 地址</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#根据-WiFi-获取网络-IP-地址"><span class="toc-nav-number">3.13.</span> <span class="toc-nav-text">根据 WiFi 获取网络 IP 地址</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#网络状态改变监听器"><span class="toc-nav-number">3.14.</span> <span class="toc-nav-text">网络状态改变监听器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#wifi列表更新监听器"><span class="toc-nav-number">3.15.</span> <span class="toc-nav-text">wifi列表更新监听器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#获取-WIFI-列表"><span class="toc-nav-number">3.16.</span> <span class="toc-nav-text">获取 WIFI 列表</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#xlib" title="xlib">xlib</a>
+                        
+                          <a class="tag" href="/tags/#NetWork" title="NetWork">NetWork</a>
+                        
+                          <a class="tag" href="/tags/#TelephonyManager" title="TelephonyManager">TelephonyManager</a>
+                        
+                          <a class="tag" href="/tags/#WifiManager" title="WifiManager">WifiManager</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="" target="_blank">微信公众号[项勇]</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/freedomer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    &copy;  2021 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://freedomer.com.cn/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;freedom&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
