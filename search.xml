@@ -352,9 +352,9 @@
       
         <tags>
             
-            <tag> Service </tag>
-            
             <tag> xlib </tag>
+            
+            <tag> Service </tag>
             
         </tags>
       
@@ -454,7 +454,7 @@
       
         <tags>
             
-            <tag> 广播 </tag>
+            <tag> BroadcastReceiver </tag>
             
         </tags>
       

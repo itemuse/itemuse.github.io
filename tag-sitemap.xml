@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://freedomer.com.cn/tags/BroadcastReceiver/</loc>
+        <lastmod>2021-04-02T01:32:59.661Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://freedomer.com.cn/tags/WifiManager/</loc>
         <lastmod>2021-03-31T08:46:51.753Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -180,13 +187,6 @@
     <url>
         <loc>https://freedomer.com.cn/tags/Intent/</loc>
         <lastmod>2021-03-16T03:44:27.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://freedomer.com.cn/tags/%25E5%25B9%25BF%25E6%2592%25AD/</loc>
-        <lastmod>2021-03-11T14:33:16.809Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
