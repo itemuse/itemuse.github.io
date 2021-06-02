@@ -84,7 +84,7 @@
       <link href="2021/04/22/%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E7%81%AB%E5%B8%81%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%87%86%E5%A4%87/"/>
       <url>2021/04/22/%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E7%81%AB%E5%B8%81%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%87%86%E5%A4%87/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://freedomer.com.cn/2021/04/22/%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A%E6%97%BA%E8%B4%A2%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%87%86%E5%A4%87/">已完成火币api获取的直接下一节</a></p><h3 id="一-注册主账号"><a href="#一-注册主账号" class="headerlink" title="一.注册主账号"></a>一.注册主账号</h3><p><a href="https://www.huobi.li/zh-cn/topic/invited/?invite_code=6zt29" target="_blank" rel="noopener"><strong>点击跳转注册账号</strong></a><br>或者<br><strong>扫码浏览器打开网址</strong><br><img src="img1.jpg" alt=""></p><h3 id="二-下载apk"><a href="#二-下载apk" class="headerlink" title="二.下载apk"></a>二.下载apk</h3><p>注册完成后会自动跳转下载程序地址<br>或者<br><a href="https://www.huobi.li/zh-cn/download/#exchange" target="_blank" rel="noopener">点击跳转至下载界面</a><br>或者<br><a href="huobi-0-1.apk" target="_blank">点击直接下载安卓版火币apk</a></p><h3 id="三-添加子账号"><a href="#三-添加子账号" class="headerlink" title="三.添加子账号"></a>三.添加子账号</h3><p>推荐在电脑网页或者电脑客户端上操作,以下以客户端为例</p><p>右上角找到子账号管理栏</p><ol><li>点击子账号</li><li>点击创建子账号<br><img src="img2.png" alt=""></li><li>接着输入输入子账号用户名<br><img src="img3.png" alt=""><br>注意这里的用户名是用于日后单独登陆用的，账号和密码自行保存好</li></ol><h3 id="四-获取子账号api"><a href="#四-获取子账号api" class="headerlink" title="四.获取子账号api"></a>四.获取子账号api</h3><ol><li>点击管理创建api<br><img src="img4.png" alt=""></li><li>api创建界面勾选<strong>查询</strong>和<strong>交易</strong>，备注信息随意<br><img src="img5.png" alt=""></li><li>点击创建即可，输入验证信息创建<br><img src="img6.png" alt=""><br>自己复制保存好api信息，因为<strong>只会显示一次</strong></li></ol><h3 id="五-子账号登陆和使用母账号抵扣"><a href="#五-子账号登陆和使用母账号抵扣" class="headerlink" title="五.子账号登陆和使用母账号抵扣"></a>五.子账号登陆和使用母账号抵扣</h3><ol><li>选择使用母账号抵扣<br>选择后，子账号的手续费就由母账号支付了<br><img src="img7.png" alt=""></li><li>登陆管理（可后续设置）<br><img src="img8.png" alt=""></li></ol>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://freedomer.com.cn/2021/04/22/%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A%E6%97%BA%E8%B4%A2%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%87%86%E5%A4%87/">已完成火币api获取的直接下一节</a></p><h3 id="一-注册主账号"><a href="#一-注册主账号" class="headerlink" title="一.注册主账号"></a>一.注册主账号</h3><p><a href="https://www.huobi.li/zh-cn/topic/invited/?invite_code=6zt29" target="_blank" rel="noopener"><strong>点击跳转注册账号</strong></a><br>或者<br><strong>扫码浏览器打开网址</strong><br><img src="img1.jpg" alt=""></p><h3 id="二-下载apk"><a href="#二-下载apk" class="headerlink" title="二.下载apk"></a>二.下载apk</h3><p>注册完成后会自动跳转下载程序地址<br>或者<br><a href="https://www.huobi.li/zh-cn/download/#exchange" target="_blank" rel="noopener">点击跳转至下载界面</a></p><h3 id="三-添加子账号"><a href="#三-添加子账号" class="headerlink" title="三.添加子账号"></a>三.添加子账号</h3><p>推荐在电脑网页或者电脑客户端上操作,以下以客户端为例</p><p>右上角找到子账号管理栏</p><ol><li>点击子账号</li><li>点击创建子账号<br><img src="img2.png" alt=""></li><li>接着输入输入子账号用户名<br><img src="img3.png" alt=""><br>注意这里的用户名是用于日后单独登陆用的，账号和密码自行保存好</li></ol><h3 id="四-获取子账号api"><a href="#四-获取子账号api" class="headerlink" title="四.获取子账号api"></a>四.获取子账号api</h3><ol><li>点击管理创建api<br><img src="img4.png" alt=""></li><li>api创建界面勾选<strong>查询</strong>和<strong>交易</strong>，备注信息随意<br><img src="img5.png" alt=""></li><li>点击创建即可，输入验证信息创建<br><img src="img6.png" alt=""><br>自己复制保存好api信息，因为<strong>只会显示一次</strong></li></ol><h3 id="五-子账号登陆和使用母账号抵扣"><a href="#五-子账号登陆和使用母账号抵扣" class="headerlink" title="五.子账号登陆和使用母账号抵扣"></a>五.子账号登陆和使用母账号抵扣</h3><ol><li>选择使用母账号抵扣<br>选择后，子账号的手续费就由母账号支付了<br><img src="img7.png" alt=""></li><li>登陆管理（可后续设置）<br><img src="img8.png" alt=""></li></ol>]]></content>
       
       
       <categories>
@@ -354,11 +354,11 @@
             
             <tag> xlib </tag>
             
+            <tag> Fragment </tag>
+            
             <tag> Tab </tag>
             
             <tag> ViewPager </tag>
-            
-            <tag> Fragment </tag>
             
         </tags>
       
